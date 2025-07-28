@@ -16,12 +16,6 @@ const Wedding: React.FC = () => {
       });
 
       // Parallax effect for bride image
-      const parallaxElement = document.querySelector('.parallax-bride');
-      if (parallaxElement) {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        (parallaxElement as HTMLElement).style.transform = `translateY(${rate}px)`;
-      }
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -52,14 +46,13 @@ const Wedding: React.FC = () => {
       </section>
 
       {/* Full Width Parallax Bride Image */}
-      <section className="relative h-screen overflow-hidden">
-        <div 
-          className="parallax-bride absolute inset-0 w-full h-[120%] bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: "url('/assets/sposa2.png')",
-            backgroundAttachment: 'fixed'
-          }}
-        ></div>
+      <section 
+        className="relative h-screen overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: "url('/assets/sposa2.png')",
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       </section>
 
