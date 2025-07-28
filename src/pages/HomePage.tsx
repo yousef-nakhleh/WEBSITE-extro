@@ -128,8 +128,61 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* About Section - UPDATED TO WHITE */}
+      {/* Extension Section - NEW */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center mb-12 fade-in">
+            <h5 className="text-gray-600 tracking-widest uppercase mb-2 font-primary">
+              Servizi Specializzati
+            </h5>
+            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-black">
+              EXTENSION
+            </h2>
+            <div className="w-20 h-[2px] bg-gold mx-auto mb-6"></div>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto font-primary">
+              Trasforma il tuo look con le nostre extension professionali. Utilizziamo il sistema innovativo 
+              Nano Hairdreams per risultati naturali e duraturi che valorizzano la tua bellezza.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {[
+              { image: '/assets/extention1.png', alt: 'Extension naturali - Prima' },
+              { image: '/assets/extention2.png', alt: 'Extension naturali - Dopo' },
+              { image: '/assets/extention3.png', alt: 'Applicazione extension professionale' },
+              { image: '/assets/extention4.png', alt: 'Risultato finale extension' }
+            ].map((item, index) => (
+              <div 
+                key={index} 
+                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 fade-in"
+                style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}
+              >
+                <img 
+                  src={item.image}
+                  alt={item.alt}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center fade-in">
+            <a 
+              href="tel:0248006574" 
+              className="bg-gold text-black px-8 py-3 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block"
+            >
+              RICHIEDI PREVENTIVO
+            </a>
+            <p className="text-sm text-gray-500 font-primary mt-4">
+              Chiamaci al 02 4800 6574 per una consulenza personalizzata
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section - UPDATED TO WHITE */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="fade-in">
