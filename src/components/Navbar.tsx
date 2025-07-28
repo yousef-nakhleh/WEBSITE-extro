@@ -29,7 +29,8 @@ const Navbar: React.FC = () => {
             <div className="hidden md:flex items-center space-x-8">
               <NavLink to="/" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>HOME</NavLink>
               <NavLink to="/chi-siamo" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CHI SIAMO</NavLink>
-              <NavLink to="/capelli" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CAPELLI</NavLink>
+              <NavLink to="/adv" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>ADV</NavLink>
+              <NavLink to="/contatti" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CONTATTI</NavLink>
             </div>
 
             {/* Centered Logo */}
@@ -43,15 +44,10 @@ const Navbar: React.FC = () => {
 
             {/* Right Navigation Links */}
             <div className="hidden md:flex items-center space-x-8">
+              <NavLink to="/capelli" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CAPELLI</NavLink>
               <NavLink to="/beauty" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>BEAUTY</NavLink>
-              <NavLink to="/contatti" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CONTATTI</NavLink>
-              <NavLink to="/adv" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>ADV</NavLink>
-            </div>
-
-            {/* CTA Buttons + Cart */}
-            <div className="hidden md:flex items-center space-x-4">
-              <NavLink to="/shop" className="btn btn-outline text-sm">SHOP</NavLink>
-              <NavLink to="/prenota/servizio" className="btn btn-primary text-sm">PRENOTA</NavLink>
+              <NavLink to="/sposa" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>SPOSA</NavLink>
+              <NavLink to="/prenota/servizio" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>PRENOTA</NavLink>
 
               {/* Cart Icon */}
               <button
@@ -79,7 +75,7 @@ const Navbar: React.FC = () => {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } pt-20`}>
           <div className="container mx-auto px-4 flex flex-col space-y-8">
-            {['/', '/chi-siamo', '/capelli', '/beauty', '/contatti', '/adv'].map((path, i) => (
+            {['/', '/chi-siamo', '/adv', '/contatti', '/capelli', '/beauty', '/sposa', '/prenota/servizio'].map((path, i) => (
               <NavLink
                 key={i}
                 to={path}
@@ -88,16 +84,14 @@ const Navbar: React.FC = () => {
               >
                 {path === '/' ? 'HOME' : 
                  path === '/chi-siamo' ? 'CHI SIAMO' :
+                 path === '/adv' ? 'ADV' :
+                 path === '/contatti' ? 'CONTATTI' :
                  path === '/capelli' ? 'CAPELLI' :
                  path === '/beauty' ? 'BEAUTY' :
-                 path === '/contatti' ? 'CONTATTI' :
-                 path === '/adv' ? 'ADV' : path.replace('/', '').toUpperCase()}
+                 path === '/sposa' ? 'SPOSA' :
+                 path === '/prenota/servizio' ? 'PRENOTA' : path.replace('/', '').toUpperCase()}
               </NavLink>
             ))}
-            <div className="flex flex-col space-y-4 pt-6">
-              <NavLink to="/shop" className="btn btn-outline text-center" onClick={() => setIsOpen(false)}>SHOP</NavLink>
-              <NavLink to="/prenota/servizio" className="btn btn-primary text-center" onClick={() => setIsOpen(false)}>PRENOTA</NavLink>
-            </div>
           </div>
         </div>
       </header>
