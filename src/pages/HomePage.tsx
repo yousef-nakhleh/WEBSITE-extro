@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
               </div>
               <div className="flex items-center gap-2 text-gold">
                 <Clock size={18} />
-                <span className="text-sm">Nel cuore di Milano</span>
+                <span className="text-sm">4m a piedi dalla fermata di Conciliazione</span>
               </div>
             </div>
             <div className="w-20 h-[1px] bg-gold mb-8"></div>
