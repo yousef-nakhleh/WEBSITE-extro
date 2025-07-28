@@ -59,73 +59,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* About Section - UPDATED TO WHITE */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="fade-in">
-              <div className="text-center md:text-left mb-8">
-                <h5 className="text-gray-600 tracking-widest uppercase mb-2 font-primary">
-                  Chi Siamo
-                </h5>
-                <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-black">
-                  LA NOSTRA STORIA
-                </h2>
-                <div className="w-20 h-[2px] bg-gold mx-auto md:mx-0"></div>
-              </div>
-              
-              <div className="space-y-6 text-gray-600 font-primary leading-relaxed">
-                <p>
-                  Extro Parrucchieri Milano nasce dalla passione per l'arte del capello e dalla dedizione verso l'eccellenza. Situato nel cuore di Milano, in Corso Magenta, il nostro salone è una vera e propria boutique del capello che prende forma dalla creatività e dall'innovazione.
-                </p>
-                <p>
-                  Il nostro team di professionisti esperti continua a portare avanti la passione per i tagli, colori e trattamenti, offrendo ai clienti un'esperienza unica e prodotti di qualità nel cuore della capitale della moda.
-                </p>
-              </div>
-              
-              {/* Features */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-                <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                  <Award className="text-gold flex-shrink-0" size={20} />
-                  <span className="text-sm text-gray-700 font-primary font-medium">Prodotti Wella</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                  <Award className="text-gold flex-shrink-0" size={20} />
-                  <span className="text-sm text-gray-700 font-primary font-medium">Sistema Nano Hairdreams</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4 fade-in">
-              <div className="space-y-4">
-                <img 
-                  src="/assets/story1.png" 
-                  alt="Feiver Parrucchieri - Ambiente elegante" 
-                  className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md"
-                />
-                <img 
-                  src="/assets/story2.png" 
-                  alt="Prodotti professionali" 
-                  className="w-full h-48 sm:h-80 object-cover rounded-lg shadow-md"
-                />
-              </div>
-              <div className="space-y-4 mt-8">
-                <img 
-                  src="/assets/story3.png" 
-                  alt="Alket al lavoro" 
-                  className="w-full h-60 sm:h-80 object-cover rounded-lg shadow-md"
-                />
-                <img 
-                  src="/assets/story4.png" 
-                  alt="Dettaglio servizio" 
-                  className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services Preview - UPDATED TO WHITE */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-8">
@@ -191,6 +124,73 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section - UPDATED TO WHITE */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="fade-in">
+              <div className="text-center md:text-left mb-8">
+                <h5 className="text-gray-600 tracking-widest uppercase mb-2 font-primary">
+                  Chi Siamo
+                </h5>
+                <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-black">
+                  LA NOSTRA STORIA
+                </h2>
+                <div className="w-20 h-[2px] bg-gold mx-auto md:mx-0"></div>
+              </div>
+              
+              <div className="space-y-6 text-gray-600 font-primary leading-relaxed">
+                <p>
+                  Extro Parrucchieri Milano nasce dalla passione per l'arte del capello e dalla dedizione verso l'eccellenza. Situato nel cuore di Milano, in Corso Magenta, il nostro salone è una vera e propria boutique del capello che prende forma dalla creatività e dall'innovazione.
+                </p>
+                <p>
+                  Il nostro team di professionisti esperti continua a portare avanti la passione per i tagli, colori e trattamenti, offrendo ai clienti un'esperienza unica e prodotti di qualità nel cuore della capitale della moda.
+                </p>
+              </div>
+              
+              {/* Features */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                  <Award className="text-gold flex-shrink-0" size={20} />
+                  <span className="text-sm text-gray-700 font-primary font-medium">Prodotti Wella</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                  <Award className="text-gold flex-shrink-0" size={20} />
+                  <span className="text-sm text-gray-700 font-primary font-medium">Sistema Nano Hairdreams</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4 fade-in">
+              <div className="space-y-4">
+                <img 
+                  src="/assets/story1.png" 
+                  alt="Feiver Parrucchieri - Ambiente elegante" 
+                  className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md"
+                />
+                <img 
+                  src="/assets/story2.png" 
+                  alt="Prodotti professionali" 
+                  className="w-full h-48 sm:h-80 object-cover rounded-lg shadow-md"
+                />
+              </div>
+              <div className="space-y-4 mt-8">
+                <img 
+                  src="/assets/story3.png" 
+                  alt="Alket al lavoro" 
+                  className="w-full h-60 sm:h-80 object-cover rounded-lg shadow-md"
+                />
+                <img 
+                  src="/assets/story4.png" 
+                  alt="Dettaglio servizio" 
+                  className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
