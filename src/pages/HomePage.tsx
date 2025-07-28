@@ -145,17 +145,17 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Taglio Uomo',
+                title: 'Acconciature',
                 
                 image: '/assets/piega.png'
               },
               {
-                title: 'Barba',
+                title: 'Beauty',
                 
                 image: '/assets/colorazione.png'
               },
               {
-                title: 'Scopri i nostri servizi completi',
+                title: 'Servizio sposa',
                 
                 image: '/assets/extention.png'
               }
