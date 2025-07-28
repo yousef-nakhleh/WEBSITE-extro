@@ -29,20 +29,20 @@ const BarberCard = ({
 }) => (
   <button
     onClick={() => onSelect(barber)}
-    className="group bg-white border-2 border-black rounded-lg p-6 text-left transition-all duration-300 hover:border-gold hover:shadow-lg w-full"
+    className="group bg-white border border-gray-300 rounded-lg p-4 text-left transition-all duration-300 hover:border-gold hover:shadow-md w-full"
   >
-    <div className="space-y-4">
-      <div className="flex items-center space-x-4">
+    <div className="space-y-3">
+      <div className="flex items-center space-x-3">
         {barber !== 'any' && barber.avatar_url ? (
           <img 
             src={barber.avatar_url} 
             alt={barber.name}
-            className="w-16 h-16 rounded-full object-cover border-2 border-gray-200 group-hover:border-gold transition-colors"
+            className="w-12 h-12 rounded-full object-cover border-2 border-gray-200 group-hover:border-gold transition-colors"
           />
         ) : (
-          <div className="w-16 h-16 rounded-full bg-gray-200 group-hover:bg-gold transition-colors flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-gray-200 group-hover:bg-gold transition-colors flex items-center justify-center">
             <svg
-              className="w-8 h-8 text-gray-600 group-hover:text-black transition-colors"
+              className="w-6 h-6 text-gray-600 group-hover:text-black transition-colors"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -58,28 +58,28 @@ const BarberCard = ({
         )}
         
         <div className="flex-1">
-          <h3 className="text-xl font-heading font-bold text-black group-hover:text-gold transition-colors">
+          <h3 className="text-lg font-heading font-bold text-black group-hover:text-gold transition-colors">
             {barber === 'any' ? 'Qualsiasi staff disponibile' : barber.name}
           </h3>
           {barber !== 'any' && barber.role && (
-            <p className="text-gray-600 font-primary">
+            <p className="text-gray-600 font-primary text-sm">
               {barber.role}
             </p>
           )}
           {barber === 'any' && (
-            <p className="text-gray-600 font-primary">
+            <p className="text-gray-600 font-primary text-sm">
               Il primo barbiere disponibile per il tuo orario
             </p>
           )}
         </div>
       </div>
 
-      <div className="flex items-center justify-between pt-2 border-t border-gray-200">
+      <div className="flex items-center justify-between pt-3 border-t border-gray-100">
         <div className="flex items-center space-x-4 text-sm font-primary">
           {barber !== 'any' && barber.phone && (
             <span className="text-gray-600 flex items-center">
               <svg
-                className="w-4 h-4 mr-1"
+                className="w-3 h-3 mr-1"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -91,11 +91,11 @@ const BarberCard = ({
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              Disponibile
+              <span className="text-xs">Disponibile</span>
             </span>
           )}
           {barber === 'any' && (
-            <span className="bg-black text-white px-3 py-1 rounded-full font-bold">
+            <span className="bg-gold text-black px-2 py-1 rounded-full font-bold text-xs">
               Raccomandato
             </span>
           )}
@@ -103,7 +103,7 @@ const BarberCard = ({
 
         <div className="text-gold group-hover:translate-x-1 transition-transform">
           <svg
-            className="w-5 h-5"
+            className="w-4 h-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -168,10 +168,10 @@ const SelectBarber = () => {
       </section>
 
       {/* Barbieri */}
-      <section className="pb-20 bg-white container mx-auto px-4 md:px-8 max-w-4xl space-y-12">
-        <div className="space-y-6">
+      <section className="pb-20 bg-white container mx-auto px-4 md:px-8 max-w-6xl space-y-10">
+        <div className="space-y-4">
           <SectionHeader title="Il Nostro Team" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Opzione "Qualsiasi" sempre per prima */}
             <BarberCard barber="any" onSelect={handleSelect} />
             
