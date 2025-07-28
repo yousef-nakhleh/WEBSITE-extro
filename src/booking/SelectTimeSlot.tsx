@@ -233,7 +233,7 @@ const SelectTimeSlot = () => {
               customer_email: customerData.email || null,
               customer_birthdate: customerData.birthdate || null,
               updated_at: new Date().toISOString(),
-              business_id: '268e0ae9-c539-471c-b4c2-1663cf598436',
+              business_id: '6ebf5f92-14ff-430e-850c-f147c3dc16f4',
             })
             .eq('id', existingContact.id);
 
@@ -249,7 +249,7 @@ const SelectTimeSlot = () => {
               customer_phone: customerData.phone,
               customer_email: customerData.email || null,
               customer_birthdate: customerData.birthdate || null,
-              business_id: '268e0ae9-c539-471c-b4c2-1663cf598436',
+              business_id: '6ebf5f92-14ff-430e-850c-f147c3dc16f4',
             })
             .select('id')
             .single();
@@ -275,7 +275,7 @@ const SelectTimeSlot = () => {
         appointment_status: 'in attesa' as const,
         paid: false,
         payment_method: null,
-        business_id: '268e0ae9-c539-471c-b4c2-1663cf598436',
+        business_id: '6ebf5f92-14ff-430e-850c-f147c3dc16f4',
       };
 
       const { error: appointmentError } = await supabase
