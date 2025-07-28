@@ -13,6 +13,7 @@ import SelectService from './booking/SelectService';
 import SelectBarber from './booking/SelectBarber';
 import SelectTimeSlot from './booking/SelectTimeSlot';
 import BookingSuccess from './booking/BookingSuccess';
+import Wedding from './pages/Wedding';
 
 import { CartProvider } from './shop/context/CartContext'; // ✅ IMPORTED
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/chi-siamo" element={<AboutUs />} />
             <Route path="/servizi" element={<ServicesPage />} />
             <Route path="/galleria" element={<GalleryPage />} />
+            <Route path="/sposa" element={<Wedding />} />
             <Route path="/shop" element={<ShopPage />} />
 
             {/* Booking flow */}
