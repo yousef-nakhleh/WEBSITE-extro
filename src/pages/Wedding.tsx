@@ -14,6 +14,14 @@ const Wedding: React.FC = () => {
           }, index * 100);
         }
       });
+
+      // Parallax effect for bride image
+      const parallaxElement = document.querySelector('.parallax-bride');
+      if (parallaxElement) {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        (parallaxElement as HTMLElement).style.transform = `translateY(${rate}px)`;
+      }
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -38,6 +46,29 @@ const Wedding: React.FC = () => {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto font-primary">
               Il giorno più importante della tua vita merita un'attenzione speciale. 
               Affidati alla nostra esperienza per essere radiosa nel tuo giorno perfetto.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Full Width Parallax Bride Image */}
+      <section className="relative h-screen overflow-hidden">
+        <div 
+          className="parallax-bride absolute inset-0 w-full h-[120%] bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: "url('/assets/sposa2.png')",
+            backgroundAttachment: 'fixed'
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="text-center text-white max-w-2xl mx-auto px-4">
+            <Crown className="text-gold mx-auto mb-6" size={64} />
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+              Il Tuo Momento Perfetto
+            </h2>
+            <p className="text-xl font-primary opacity-90">
+              Ogni dettaglio curato per rendere indimenticabile il giorno più importante della tua vita
             </p>
           </div>
         </div>
