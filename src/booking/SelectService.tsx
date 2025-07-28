@@ -16,7 +16,7 @@ interface Service {
 /* ---------- COMPONENTI UI INLINE ---------- */
 const SectionHeader = ({ title }: { title: string }) => (
   <div className="text-center">
-    <h2 className="text-2xl font-heading font-bold text-black mb-2">{title}</h2>
+    <h3 className="text-xl font-heading font-bold text-black mb-3">{title}</h3>
     <div className="w-20 h-[2px] bg-gold mx-auto" />
   </div>
 );
@@ -30,30 +30,30 @@ const ServiceCard = ({
 }) => (
   <button
     onClick={() => onSelect(service)}
-    className="group bg-white border-2 border-black rounded-lg p-6 text-left transition-all duration-300 hover:border-gold hover:shadow-lg"
+    className="group bg-white border border-gray-300 rounded-lg p-4 text-left transition-all duration-300 hover:border-gold hover:shadow-md w-full"
   >
-    <div className="space-y-4">
-      <h3 className="text-xl font-heading font-bold text-black group-hover:text-gold transition-colors">
+    <div className="space-y-3">
+      <h4 className="text-lg font-heading font-bold text-black group-hover:text-gold transition-colors">
         {service.name}
-      </h3>
+      </h4>
 
       {service.description && (
-        <p className="text-gray-600 font-primary leading-relaxed">
+        <p className="text-gray-600 font-primary text-sm leading-relaxed line-clamp-2">
           {service.description}
         </p>
       )}
 
-      <div className="flex items-center justify-between pt-2 border-t border-gray-200">
-        <div className="flex items-center space-x-4 text-sm font-primary">
+      <div className="flex items-center justify-between pt-3 border-t border-gray-100">
+        <div className="flex items-center space-x-3 text-xs font-primary">
           {service.price !== null && service.price !== undefined && (
-            <span className="bg-black text-white px-3 py-1 rounded-full font-bold">
+            <span className="bg-gold text-black px-2 py-1 rounded-full font-bold text-xs">
               €{service.price}
             </span>
           )}
           {service.duration_min !== null && service.duration_min !== undefined && (
-            <span className="text-gray-600 flex items-center">
+            <span className="text-gray-500 flex items-center">
               <svg
-                className="w-4 h-4 mr-1"
+                className="w-3 h-3 mr-1"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -72,7 +72,7 @@ const ServiceCard = ({
 
         <div className="text-gold group-hover:translate-x-1 transition-transform">
           <svg
-            className="w-5 h-5"
+            className="w-4 h-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -148,11 +148,11 @@ const SelectService = () => {
       </section>
 
       {/* Categorie + card */}
-      <section className="pb-20 bg-white container mx-auto px-4 md:px-8 max-w-4xl space-y-12">
+      <section className="pb-20 bg-white container mx-auto px-4 md:px-8 max-w-6xl space-y-10">
         {Object.entries(categories).map(([title, list]) => (
-          <div key={title} className="space-y-6">
+          <div key={title} className="space-y-4">
             <SectionHeader title={title} />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {list.map((service) => (
                 <ServiceCard key={service.id} service={service} onSelect={handleSelect} />
               ))}
