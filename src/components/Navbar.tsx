@@ -25,6 +25,14 @@ const Navbar: React.FC = () => {
       }`}>
         <div className="container mx-auto px-4 md:px-8">
           <nav className="flex justify-between items-center bg-white rounded-[40px] px-8 py-4 shadow-lg border border-gray-200">
+            {/* Left Navigation Links */}
+            <div className="hidden md:flex items-center space-x-8">
+              <NavLink to="/" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>HOME</NavLink>
+              <NavLink to="/chi-siamo" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CHI SIAMO</NavLink>
+              <NavLink to="/capelli" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CAPELLI</NavLink>
+            </div>
+
+            {/* Centered Logo */}
             <NavLink to="/" className="flex items-center">
               <img 
                 src="/assets/logo.png" 
@@ -33,12 +41,11 @@ const Navbar: React.FC = () => {
               />
             </NavLink>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-10">
-              <NavLink to="/" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>HOME</NavLink>
-              <NavLink to="/servizi" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>SERVIZI</NavLink>
-              <NavLink to="/galleria" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>GALLERIA</NavLink>
+            {/* Right Navigation Links */}
+            <div className="hidden md:flex items-center space-x-8">
+              <NavLink to="/beauty" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>BEAUTY</NavLink>
               <NavLink to="/contatti" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CONTATTI</NavLink>
+              <NavLink to="/adv" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>ADV</NavLink>
             </div>
 
             {/* CTA Buttons + Cart */}
@@ -72,14 +79,19 @@ const Navbar: React.FC = () => {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } pt-20`}>
           <div className="container mx-auto px-4 flex flex-col space-y-8">
-            {['/', '/servizi', '/galleria', '/contatti'].map((path, i) => (
+            {['/', '/chi-siamo', '/capelli', '/beauty', '/contatti', '/adv'].map((path, i) => (
               <NavLink
                 key={i}
                 to={path}
                 className="text-xl font-heading text-black hover:text-gold transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
-                {path.replace('/', '').toUpperCase() || 'HOME'}
+                {path === '/' ? 'HOME' : 
+                 path === '/chi-siamo' ? 'CHI SIAMO' :
+                 path === '/capelli' ? 'CAPELLI' :
+                 path === '/beauty' ? 'BEAUTY' :
+                 path === '/contatti' ? 'CONTATTI' :
+                 path === '/adv' ? 'ADV' : path.replace('/', '').toUpperCase()}
               </NavLink>
             ))}
             <div className="flex flex-col space-y-4 pt-6">
