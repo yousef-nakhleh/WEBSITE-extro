@@ -20,13 +20,13 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <header className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'py-3' : 'py-6'
-      }`}>
-        <div className="container mx-auto px-4 md:px-8">
-          <nav className="flex justify-between items-center bg-white rounded-[40px] px-8 py-4 shadow-lg border border-gray-200">
+      <header className="fixed w-full z-50 transition-all duration-300">
+        <nav className={`bg-white border border-gray-800 transition-all duration-300 ${
+          scrolled ? 'py-3' : 'py-6'
+        }`}>
+          <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
             {/* Left Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-8 flex-grow justify-end pr-8">
               <NavLink to="/" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>HOME</NavLink>
               <NavLink to="/chi-siamo" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CHI SIAMO</NavLink>
               <NavLink to="/adv" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>ADV</NavLink>
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Centered Logo */}
-            <NavLink to="/" className="flex items-center">
+            <NavLink to="/" className="flex items-center flex-shrink-0">
               <img 
                 src="/assets/logo.png" 
                 alt="Feivèr Logo" 
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
             </NavLink>
 
             {/* Right Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-8 flex-grow justify-start pl-8">
               <NavLink to="/capelli" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>CAPELLI</NavLink>
               <NavLink to="/beauty" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>BEAUTY</NavLink>
               <NavLink to="/sposa" className={({ isActive }) => `nav-link-black ${isActive ? 'active' : ''} text-sm tracking-wider`}>SPOSA</NavLink>
@@ -67,8 +67,8 @@ const Navbar: React.FC = () => {
             <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-black">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-          </nav>
-        </div>
+          </div>
+        </nav>
 
         {/* Mobile Menu */}
         <div className={`fixed inset-0 bg-white bg-opacity-95 z-40 md:hidden transition-transform duration-300 ease-in-out ${
