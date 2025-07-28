@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <header className="fixed w-full z-50 transition-all duration-300">
-        <nav className={`bg-white border border-gray-800 transition-all duration-300 ${
+        <nav className={`bg-black border border-gray-800 transition-all duration-300 ${
           scrolled ? 'py-3' : 'py-6'
         }`}>
           <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
               <img 
                 src="/assets/logo.png" 
                 alt="Feivèr Logo" 
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </NavLink>
 
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
 
               {/* Cart Icon */}
               <button
-                className="relative text-black hover:text-gold transition-colors"
+                className="relative text-white hover:text-gold transition-colors"
                 onClick={() => setCartOpen(true)}
               >
                 <ShoppingCart size={24} />
@@ -64,14 +64,14 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Mobile Menu Toggle */}
-            <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-black">
+            <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </nav>
 
         {/* Mobile Menu */}
-        <div className={`fixed inset-0 bg-white bg-opacity-95 z-40 md:hidden transition-transform duration-300 ease-in-out ${
+        <div className={`fixed inset-0 bg-black bg-opacity-95 z-40 md:hidden transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } pt-20`}>
           <div className="container mx-auto px-4 flex flex-col space-y-8">
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
               <NavLink
                 key={i}
                 to={path}
-                className="text-xl font-heading text-black hover:text-gold transition-colors py-2"
+                className="text-xl font-heading text-white hover:text-gold transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {path === '/' ? 'HOME' : 
