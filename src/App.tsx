@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import GalleryPage from './pages/GalleryPage';
+import AboutUs from './pages/AboutUs';
 import ShopPage from './shop/pages/ShopPage';
 
 import SelectService from './booking/SelectService';
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             {/* Website pages */}
             <Route path="/" element={<HomePage />} />
+            <Route path="/chi-siamo" element={<AboutUs />} />
             <Route path="/servizi" element={<ServicesPage />} />
             <Route path="/galleria" element={<GalleryPage />} />
             <Route path="/shop" element={<ShopPage />} />
