@@ -147,17 +147,17 @@ const HomePage: React.FC = () => {
               {
                 title: 'Acconciature',
                 
-                image: '/assets/piega.png'
+                image: '/assets/capelli.png'
               },
               {
                 title: 'Beauty',
                 
-                image: '/assets/colorazione.png'
+                image: '/assets/beauty.png'
               },
               {
                 title: 'Servizio sposa',
                 
-                image: '/assets/extention.png'
+                image: '/assets/sposa.png'
               }
             ].map((service, index) => (
               <div 
