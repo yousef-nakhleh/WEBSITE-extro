@@ -61,17 +61,6 @@ const Wedding: React.FC = () => {
           }}
         ></div>
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="text-center text-white max-w-2xl mx-auto px-4">
-            <Crown className="text-gold mx-auto mb-6" size={64} />
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Il Tuo Momento Perfetto
-            </h2>
-            <p className="text-xl font-primary opacity-90">
-              Ogni dettaglio curato per rendere indimenticabile il giorno più importante della tua vita
-            </p>
-          </div>
-        </div>
       </section>
 
       {/* Main Content Section */}
@@ -82,7 +71,7 @@ const Wedding: React.FC = () => {
             <div className="fade-in">
               <div className="relative overflow-hidden rounded-lg shadow-xl">
                 <img 
-                  src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  src="/assets/sposa3.png" 
                   alt="Sposa elegante con acconciatura professionale"
                   className="w-full h-[600px] object-cover"
                 />
@@ -119,18 +108,17 @@ const Wedding: React.FC = () => {
                 </div>
               </div>
 
-              {/* Price Range */}
-              <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <Crown className="text-gold" size={24} />
-                  <h3 className="text-xl font-heading font-semibold text-black">Investimento</h3>
-                </div>
-                <div className="text-3xl font-heading font-bold text-gold mb-2">
-                  €350,00 - €600,00
-                </div>
-                <p className="text-sm text-gray-600 font-primary">
-                  Il prezzo varia in base ai servizi scelti e alla complessità dell'acconciatura
-                </p>
+              {/* Contact CTA */}
+              <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200 text-center">
+                <h3 className="text-xl font-heading font-semibold text-black mb-4">
+                  Vuoi saperne di più? Contattaci
+                </h3>
+                <a 
+                  href="tel:0248006574" 
+                  className="bg-gold text-black px-6 py-3 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block"
+                >
+                  CHIAMA ORA
+                </a>
               </div>
             </div>
           </div>
