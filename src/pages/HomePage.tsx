@@ -34,20 +34,20 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="max-w-4xl">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-heading font-bold mb-4 fade-in" style={{ '--delay': '100ms' } as React.CSSProperties}>
-              FEIVER<br />
-              <span className="text-gold">PARRUCCHIERI</span>
+              EXTRO<br />
+              <span className="text-gold">PARRUCCHIERI MILANO</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 max-w-2xl fade-in" style={{ '--delay': '200ms' } as React.CSSProperties}>
-              Innovazione e creatività nel cuore di Milano. Alket e il suo team ti offrono un'esperienza unica con i migliori prodotti e le tecniche più avanzate.
+              Diamo forma alle emozioni. Il nostro team ti offre un'esperienza unica con i migliori prodotti e le tecniche più avanzate.
             </p>
             <div className="flex items-center gap-6 mb-8 fade-in" style={{ '--delay': '250ms' } as React.CSSProperties}>
               <div className="flex items-center gap-2 text-gold">
                 <MapPin size={18} />
-                <span className="text-sm">Via G. Mazzini, 11, 24047 Treviglio BG</span>
+                <span className="text-sm">Corso Magenta, 79, 20123 Milano MI</span>
               </div>
               <div className="flex items-center gap-2 text-gold">
                 <Clock size={18} />
-                <span className="text-sm">5 min dalla stazione centrale di Treviglio</span>
+                <span className="text-sm">Nel cuore di Milano</span>
               </div>
             </div>
             <div className="w-20 h-[1px] bg-gold mb-8"></div>
@@ -76,10 +76,10 @@ const HomePage: React.FC = () => {
               
               <div className="space-y-6 text-gray-600 font-primary leading-relaxed">
                 <p>
-                  Nel 2021, Feivèr apre il suo primo salone nel cuore di Treviglio (BG), precisamente in Via San Martino, una delle vie più frequentate e conosciute dai cittadini. È una vera e propria boutique del capello che prende forma dalla passione e dalla dedizione dei suoi titolari.
+                  Extro Parrucchieri Milano nasce dalla passione per l'arte del capello e dalla dedizione verso l'eccellenza. Situato nel cuore di Milano, in Corso Magenta, il nostro salone è una vera e propria boutique del capello che prende forma dalla creatività e dall'innovazione.
                 </p>
                 <p>
-                  Dopo tre anni di attività, Alket riceve un'interessante proposta d'acquisto e, con grande coraggio, apre il salone in Via Giuseppe Mazzini 11, sempre nella città di Treviglio. Qui, Alket continua a portare avanti la sua passione per i tagli e barba, offrendo ai clienti un'esperienza unica e prodotti di qualità.
+                  Il nostro team di professionisti esperti continua a portare avanti la passione per i tagli, colori e trattamenti, offrendo ai clienti un'esperienza unica e prodotti di qualità nel cuore della capitale della moda.
                 </p>
               </div>
               
@@ -266,7 +266,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-2xl mx-auto fade-in">
             <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6">Prenota Il Tuo Appuntamento</h2>
             <p className="text-lg text-gray-300 mb-8">
-              Affidati all'esperienza di Alket e del suo team. Prenota ora per un'esperienza di bellezza unica nel cuore di Milano.
+              Affidati all'esperienza del nostro team. Prenota ora per un'esperienza di bellezza unica nel cuore di Milano.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/prenota/servizio" className="btn btn-primary text-lg px-8 py-3">PRENOTA ORA</Link>

@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
             <NavLink to="/" className="flex items-center flex-shrink-0">
               <img 
                 src="/assets/logo.png" 
-                alt="Feivèr Logo" 
+                alt="Extro Logo" 
                 className="h-10 w-auto"
               />
             </NavLink>

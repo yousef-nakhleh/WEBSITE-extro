@@ -7,9 +7,9 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h4 className="text-2xl font-heading mb-4 text-black">FEIVER PARRUCCHIERI</h4>
+            <h4 className="text-2xl font-heading mb-4 text-black">EXTRO PARRUCCHIERI MILANO</h4>
             <p className="text-gray-600 mb-6">
-              Nel cuore di Treviglio, Alket e il suo team offrono servizi innovativi e creativi in un ambiente luminoso ed elegante.
+              Nel cuore di Milano, il nostro team offre servizi innovativi e creativi in un ambiente luminoso ed elegante.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 border border-gold flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
@@ -33,23 +33,23 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span>Martedì</span>
-                <span>09:00 - 18:30</span>
+                <span>09:00 - 18:00</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span>Mercoledì</span>
-                <span>09:00 - 18:30</span>
+                <span>09:00 - 18:00</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span>Giovedì</span>
-                <span>09:00 - 18:30</span>
+                <span>09:00 - 18:00</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span>Venerdì</span>
-                <span>09:00 - 18:30</span>
+                <span>09:00 - 18:00</span>
               </div>
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span>Sabato</span>
-                <span>09:00 - 18:30</span>
+                <span>09:00 - 18:00</span>
               </div>
               <div className="flex justify-between pb-2">
                 <span>Domenica</span>
@@ -65,23 +65,23 @@ const Footer: React.FC = () => {
                 <MapPin className="text-gold mt-1 flex-shrink-0" size={18} />
                 <span>
                   <span className="text-gold block mb-1">Indirizzo</span>
-                  Via G. Mazzini, 11<br />
-                  24047 Treviglio BG<br />
-                  <span className="text-sm text-gray-500">A 5 minuti dalla stazione centrale di Treviglio</span>
+                  Corso Magenta, 79<br />
+                  20123 Milano MI<br />
+                  <span className="text-sm text-gray-500">Nel cuore di Milano</span>
                 </span>
               </p>
               <p className="flex items-center gap-3">
                 <Phone className="text-gold flex-shrink-0" size={18} />
                 <span>
                   <span className="text-gold block mb-1">Telefono</span>
-                  <a href="tel:3427575655" className="hover:text-gold transition-colors">342 757 5655</a>
+                  <a href="tel:0248006574" className="hover:text-gold transition-colors">02 4800 6574</a>
                 </span>
               </p>
               <p className="flex items-center gap-3">
                 <Mail className="text-gold flex-shrink-0" size={18} />
                 <span>
                   <span className="text-gold block mb-1">Email</span>
-                  <a href="mailto:info@feiver.it" className="hover:text-gold transition-colors">info@feiver.it</a>
+                  <a href="mailto:info@extro.it" className="hover:text-gold transition-colors">info@extro.it</a>
                 </span>
               </p>
             </div>
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-200 mt-10 pt-6 text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center">
-          <p>© 2025 Feiver Parrucchieri. Tutti i diritti riservati.</p>
+          <p>© 2025 Extro Parrucchieri Milano. Tutti i diritti riservati.</p>
           <div className="mt-4 md:mt-0">
             <a href="#" className="hover:text-gold transition-colors mr-6">Privacy Policy</a>
             <a href="#" className="hover:text-gold transition-colors">Termini di Servizio</a>

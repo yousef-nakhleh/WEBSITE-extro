@@ -49,7 +49,7 @@ const GalleryPage: React.FC = () => {
             <h5 className="text-gold tracking-widest uppercase mb-2">Il Nostro Lavoro</h5>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-bold mb-6">GALLERIA</h1>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Scopri i nostri lavori e l'ambiente elegante di Seventyfour Parrucchieri. 
+              Scopri i nostri lavori e l'ambiente elegante di Extro Parrucchieri Milano. 
               Ogni creazione racconta la nostra passione per l'innovazione e la bellezza.
             </p>
           </div>
@@ -124,14 +124,14 @@ const GalleryPage: React.FC = () => {
               <div key={index} className="group relative overflow-hidden rounded-lg">
                 <img 
                   src={image}
-                  alt={`Feiver Instagram ${index + 1}`}
+                  alt={`Extro Instagram ${index + 1}`}
                   className="w-full aspect-square object-cover"
                 />
                 <a 
                   href="#" 
                   className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                 >
-                  <span className="text-white text-sm font-semibold">@feiverparrucchieri</span>
+                  <span className="text-white text-sm font-semibold">@extroparrucchieri</span>
                 </a>
               </div>
             ))}
@@ -149,12 +149,12 @@ const GalleryPage: React.FC = () => {
           <div className="max-w-2xl mx-auto fade-in">
             <h2 className="text-4xl font-heading font-bold mb-6">Vuoi Essere Il Prossimo?</h2>
             <p className="text-lg text-gray-300 mb-8">
-              Ti è piaciuto quello che hai visto? Prenota il tuo appuntamento con Alket e il suo team 
-              per un'esperienza di bellezza unica nel cuore di Treviglio.
+              Ti è piaciuto quello che hai visto? Prenota il tuo appuntamento con il nostro team 
+              per un'esperienza di bellezza unica nel cuore di Milano.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/prenota/servizio" className="btn btn-primary text-lg px-8 py-3">PRENOTA ORA</a>
-              <a href="tel:3427575655" className="btn btn-outline text-lg px-8 py-3">CHIAMA ORA</a>
+              <a href="tel:0248006574" className="btn btn-outline text-lg px-8 py-3">CHIAMA ORA</a>
             </div>
           </div>
         </div>
