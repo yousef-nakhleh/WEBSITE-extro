@@ -167,83 +167,31 @@ const HomePage: React.FC = () => {
             ))}
           </div>
 
-          <div className="text-center fade-in">
-            <a 
-              href="tel:0248006574" 
-              className="bg-gold text-black px-8 py-3 font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block"
-            >
-              RICHIEDI PREVENTIVO
-            </a>
-            <p className="text-sm text-gray-500 font-primary mt-4">
-              Chiamaci al 02 4800 6574 per una consulenza personalizzata
-            </p>
+          <div className="text-center mb-8 fade-in">
+            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-black">
+              CHI SIAMO: una storia trentennale
+            </h2>
+            <div className="w-20 h-[2px] bg-gold mx-auto"></div>
           </div>
         </div>
       </section>
 
-      {/* About Section - UPDATED TO WHITE */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="fade-in">
-              <div className="text-center md:text-left mb-8">
-                <h5 className="text-gray-600 tracking-widest uppercase mb-2 font-primary">
-                  Chi Siamo
-                </h5>
-                <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-black">
-                  LA NOSTRA STORIA
-                </h2>
-                <div className="w-20 h-[2px] bg-gold mx-auto md:mx-0"></div>
-              </div>
-              
-              <div className="space-y-6 text-gray-600 font-primary leading-relaxed">
-                <p>
-                  Extro Parrucchieri Milano nasce dalla passione per l'arte del capello e dalla dedizione verso l'eccellenza. Situato nel cuore di Milano, in Corso Magenta, il nostro salone è una vera e propria boutique del capello che prende forma dalla creatività e dall'innovazione.
-                </p>
-                <p>
-                  Il nostro team di professionisti esperti continua a portare avanti la passione per i tagli, colori e trattamenti, offrendo ai clienti un'esperienza unica e prodotti di qualità nel cuore della capitale della moda.
-                </p>
-              </div>
-              
-              {/* Features */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-                <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                  <Award className="text-gold flex-shrink-0" size={20} />
-                  <span className="text-sm text-gray-700 font-primary font-medium">Prodotti Wella</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 bg-gray-50 border border-gray-200">
-                  <Award className="text-gold flex-shrink-0" size={20} />
-                  <span className="text-sm text-gray-700 font-primary font-medium">Sistema Nano Hairdreams</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4 fade-in">
-              <div className="space-y-4">
-                <img 
-                  src="/assets/story1.png" 
-                  alt="Feiver Parrucchieri - Ambiente elegante" 
-                  className="w-full h-48 sm:h-64 object-cover shadow-md"
-                />
-                <img 
-                  src="/assets/story2.png" 
-                  alt="Prodotti professionali" 
-                  className="w-full h-48 sm:h-80 object-cover shadow-md"
-                />
-              </div>
-              <div className="space-y-4 mt-8">
-                <img 
-                  src="/assets/story3.png" 
-                  alt="Alket al lavoro" 
-                  className="w-full h-60 sm:h-80 object-cover shadow-md"
-                />
-                <img 
-                  src="/assets/story4.png" 
-                  alt="Dettaglio servizio" 
-                  className="w-full h-48 sm:h-64 object-cover shadow-md"
-                />
-              </div>
-            </div>
+      {/* Scrolling About Image Section */}
+      <section 
+        className="relative h-screen overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ 
+          backgroundImage: "url('/assets/aboutus.png')"
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center fade-in">
+            <Link 
+              to="/chi-siamo" 
+              className="bg-gold text-black px-8 py-4 font-heading font-bold text-xl transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block"
+            >
+              SCOPRI DI PIÙ
+            </Link>
           </div>
         </div>
       </section>
