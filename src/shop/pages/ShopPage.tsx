@@ -67,7 +67,7 @@ const ShopPage = () => {
                 <img 
                   src="/assets/nashi.png" 
                   alt="Nashi - Prodotti professionali per capelli"
-                  className="w-full h-auto rounded-lg shadow-lg"
+                  className="w-full h-auto shadow-lg"
                 />
               </div>
               <div className="fade-in space-y-6">
@@ -97,7 +97,7 @@ const ShopPage = () => {
                   </div>
                 </div>
                 <div className="pt-4">
-                  <button className="bg-gold text-black px-6 py-3 rounded-lg font-heading font-bold transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl">
+                  <button className="bg-gold text-black px-6 py-3 font-heading font-bold transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl">
                     SCOPRI LA LINEA NASHI
                   </button>
                 </div>
@@ -115,7 +115,7 @@ const ShopPage = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 sm:px-6 py-2 rounded-lg uppercase tracking-wider text-sm font-primary font-medium transition-all whitespace-nowrap ${
+                className={`px-4 sm:px-6 py-2 uppercase tracking-wider text-sm font-primary font-medium transition-all whitespace-nowrap ${
                   selectedCategory === category 
                     ? 'bg-gold text-black shadow-lg' 
                     : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400'
@@ -142,7 +142,7 @@ const ShopPage = () => {
           ) : (
             <div className="text-center py-16">
               <div className="max-w-md mx-auto">
-                <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 bg-gray-100 flex items-center justify-center mx-auto mb-6">
                   <svg
                     className="w-12 h-12 text-gray-400"
                     fill="none"
@@ -210,7 +210,7 @@ const ShopPage = () => {
                 description: 'Ingredienti naturali che rispettano e nutrono i tuoi capelli'
               }
             ].map((feature, index) => (
-              <div key={index} className="fade-in text-center p-8 bg-white rounded-lg shadow-sm border border-gray-200 hover:border-gold transition-all">
+              <div key={index} className="fade-in text-center p-8 bg-white shadow-sm border border-gray-200 hover:border-gold transition-all">
                 <div className="text-gold mx-auto mb-4 flex justify-center">
                   {feature.icon}
                 </div>
@@ -232,10 +232,10 @@ const ShopPage = () => {
               Contattaci per una consulenza personalizzata.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:0248006574" className="bg-gold text-black px-8 py-3 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl">
+              <a href="tel:0248006574" className="bg-gold text-black px-8 py-3 font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl">
                 CHIAMA ORA
               </a>
-              <a href="/prenota/servizio" className="bg-white text-black border-2 border-black px-8 py-3 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-gray-50 hover:border-gold">
+              <a href="/prenota/servizio" className="bg-white text-black border-2 border-black px-8 py-3 font-heading font-bold text-lg transition-all duration-300 hover:bg-gray-50 hover:border-gold">
                 PRENOTA CONSULENZA
               </a>
             </div>

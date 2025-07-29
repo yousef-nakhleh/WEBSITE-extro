@@ -29,7 +29,7 @@ const BarberCard = ({
 }) => (
   <button
     onClick={() => onSelect(barber)}
-    className="group bg-white border border-gray-300 rounded-lg p-4 text-left transition-all duration-300 hover:border-gold hover:shadow-md w-full"
+    className="group bg-white border border-gray-300 p-4 text-left transition-all duration-300 hover:border-gold hover:shadow-md w-full"
   >
     <div className="space-y-3">
       <div className="flex items-center space-x-3">
@@ -37,10 +37,10 @@ const BarberCard = ({
           <img 
             src={barber.avatar_url} 
             alt={barber.name}
-            className="w-12 h-12 rounded-full object-cover border-2 border-gray-200 group-hover:border-gold transition-colors"
+            className="w-12 h-12 object-cover border-2 border-gray-200 group-hover:border-gold transition-colors"
           />
         ) : (
-          <div className="w-12 h-12 rounded-full bg-gray-200 group-hover:bg-gold transition-colors flex items-center justify-center">
+          <div className="w-12 h-12 bg-gray-200 group-hover:bg-gold transition-colors flex items-center justify-center">
             <svg
               className="w-6 h-6 text-gray-600 group-hover:text-black transition-colors"
               fill="none"
@@ -95,7 +95,7 @@ const BarberCard = ({
             </span>
           )}
           {barber === 'any' && (
-            <span className="bg-gold text-black px-2 py-1 rounded-full font-bold text-xs">
+            <span className="bg-gold text-black px-2 py-1 font-bold text-xs">
               Raccomandato
             </span>
           )}

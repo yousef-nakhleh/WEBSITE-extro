@@ -10,7 +10,7 @@ export default function ProductCard({ product }: Props) {
   const { addToCart } = useCart();
 
   return (
-    <div className="group bg-white border-2 border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:border-gold transition-all duration-300">
+    <div className="group bg-white border-2 border-gray-200 overflow-hidden shadow-md hover:shadow-lg hover:border-gold transition-all duration-300">
       {product.image_url && (
         <div className="relative overflow-hidden">
           <img
@@ -59,7 +59,7 @@ export default function ProductCard({ product }: Props) {
           <button
             onClick={() => addToCart(product)}
             disabled={product.stock <= 0}
-            className="flex items-center gap-2 bg-gold text-black px-4 py-2 rounded-lg font-primary font-semibold transition-all duration-300 hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
+            className="flex items-center gap-2 bg-gold text-black px-4 py-2 font-primary font-semibold transition-all duration-300 hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
           >
             <ShoppingCart size={16} />
             <span className="hidden sm:inline">Aggiungi</span>

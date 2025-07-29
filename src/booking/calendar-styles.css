@@ -2,14 +2,12 @@
 .custom-datepicker {
   font-family: 'Montserrat', sans-serif;
   border: 2px solid #e5e7eb;
-  border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .custom-datepicker .react-datepicker__header {
   background-color: #c7ad84;
   border-bottom: none;
-  border-radius: 6px 6px 0 0;
   padding: 16px 0;
 }
 
@@ -70,7 +68,6 @@
   height: 2.5rem;
   line-height: 2.5rem;
   margin: 2px;
-  border-radius: 6px;
   font-weight: 500;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -128,7 +125,6 @@
 .calendar-input {
   padding: 12px 16px;
   border: 2px solid #e5e7eb;
-  border-radius: 8px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -153,7 +149,6 @@
 /* Calendar container styling */
 .calendar-container {
   background: #fff;
-  border-radius: 12px;
   padding: 24px;
   border: 2px solid #e5e7eb;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -185,7 +180,6 @@
   background: linear-gradient(135deg, #c7ad84 0%, #b8a074 100%);
   color: #000;
   padding: 12px 20px;
-  border-radius: 8px;
   text-align: center;
   margin-top: 16px;
   font-family: 'Cormorant Garamond', serif;

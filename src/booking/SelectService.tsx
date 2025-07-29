@@ -30,7 +30,7 @@ const ServiceCard = ({
 }) => (
   <button
     onClick={() => onSelect(service)}
-    className="group bg-white border border-gray-300 rounded-lg p-4 text-left transition-all duration-300 hover:border-gold hover:shadow-md w-full"
+    className="group bg-white border border-gray-300 p-4 text-left transition-all duration-300 hover:border-gold hover:shadow-md w-full"
   >
     <div className="space-y-3">
       <h4 className="text-lg font-heading font-bold text-black group-hover:text-gold transition-colors">

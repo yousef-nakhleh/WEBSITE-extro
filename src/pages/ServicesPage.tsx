@@ -113,7 +113,7 @@ const ServicesPage: React.FC = () => {
                   {category.services.map((service, serviceIndex) => (
                     <div 
                       key={serviceIndex} 
-                      className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-gold"
+                      className="bg-gray-50 p-6 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-gold"
                     >
                       <div className="flex justify-between items-start mb-3">
                         <h3 className="text-xl font-heading font-semibold text-black">{service.name}</h3>
@@ -145,7 +145,7 @@ const ServicesPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {brands.map((brand, index) => (
-              <div key={index} className="fade-in text-center p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:border-gold transition-all">
+              <div key={index} className="fade-in text-center p-8 bg-white shadow-sm border border-gray-100 hover:border-gold transition-all">
                 <Award className="text-gold mx-auto mb-4" size={48} />
                 <h3 className="text-2xl font-heading font-semibold mb-2 text-black">{brand.name}</h3>
                 <p className="text-gray-600 font-primary">{brand.description}</p>
@@ -159,7 +159,7 @@ const ServicesPage: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="fade-in p-8 bg-gray-50 rounded-lg border border-gray-100 hover:border-gold transition-all">
+            <div className="fade-in p-8 bg-gray-50 border border-gray-100 hover:border-gold transition-all">
               <Clock className="text-gold mb-4" size={32} />
               <h3 className="text-2xl font-heading font-semibold mb-4 text-black">Su Appuntamento</h3>
               <p className="text-gray-600 mb-6 font-primary">
@@ -167,7 +167,7 @@ const ServicesPage: React.FC = () => {
                 Prenota in anticipo per assicurarti il tuo posto.
               </p>
             </div>
-            <div className="fade-in p-8 bg-gray-50 rounded-lg border border-gray-100 hover:border-gold transition-all">
+            <div className="fade-in p-8 bg-gray-50 border border-gray-100 hover:border-gold transition-all">
               <Star className="text-gold mb-4" size={32} />
               <h3 className="text-2xl font-heading font-semibold mb-4 text-black">Ambiente Unico</h3>
               <p className="text-gray-600 mb-6 font-primary">
@@ -175,7 +175,7 @@ const ServicesPage: React.FC = () => {
                 crea un ambiente unico ed elegante per la tua esperienza di bellezza.
               </p>
             </div>
-            <div className="fade-in p-8 bg-gray-50 rounded-lg border border-gray-100 hover:border-gold transition-all">
+            <div className="fade-in p-8 bg-gray-50 border border-gray-100 hover:border-gold transition-all">
               <Award className="text-gold mb-4" size={32} />
               <h3 className="text-2xl font-heading font-semibold mb-4 text-black">Tecnologia Avanzata</h3>
               <p className="text-gray-600 mb-6 font-primary">

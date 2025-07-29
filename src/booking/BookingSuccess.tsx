@@ -56,7 +56,7 @@ const BookingSuccess = () => {
           <div className="max-w-4xl mx-auto">
             {/* Success Icon */}
             <div className="mb-8">
-              <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-24 h-24 bg-green-100 flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-12 h-12 text-green-600" />
               </div>
             </div>
@@ -82,7 +82,7 @@ const BookingSuccess = () => {
       {appointmentInfo && (
         <section className="pb-16 bg-white">
           <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-            <div className="bg-gray-50 rounded-lg p-8 border-2 border-gray-200 shadow-lg">
+            <div className="bg-gray-50 p-8 border-2 border-gray-200 shadow-lg">
               <div className="text-center mb-8">
                 <h2 className="text-2xl font-heading font-bold text-black mb-2">
                   Dettagli del Tuo Appuntamento
@@ -94,7 +94,7 @@ const BookingSuccess = () => {
                 {/* Left Column */}
                 <div className="space-y-6">
                   {/* Date & Time */}
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                  <div className="flex items-start gap-4 p-4 bg-white border border-gray-200">
                     <Calendar className="text-gold mt-1 flex-shrink-0" size={24} />
                     <div>
                       <h3 className="font-heading font-semibold text-black mb-1">Data</h3>
@@ -104,7 +104,7 @@ const BookingSuccess = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                  <div className="flex items-start gap-4 p-4 bg-white border border-gray-200">
                     <Clock className="text-gold mt-1 flex-shrink-0" size={24} />
                     <div>
                       <h3 className="font-heading font-semibold text-black mb-1">Orario</h3>
@@ -115,7 +115,7 @@ const BookingSuccess = () => {
                   </div>
 
                   {/* Service */}
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                  <div className="flex items-start gap-4 p-4 bg-white border border-gray-200">
                     <Scissors className="text-gold mt-1 flex-shrink-0" size={24} />
                     <div>
                       <h3 className="font-heading font-semibold text-black mb-1">Servizio</h3>
@@ -134,7 +134,7 @@ const BookingSuccess = () => {
                 {/* Right Column */}
                 <div className="space-y-6">
                   {/* Barber */}
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                  <div className="flex items-start gap-4 p-4 bg-white border border-gray-200">
                     <User className="text-gold mt-1 flex-shrink-0" size={24} />
                     <div>
                       <h3 className="font-heading font-semibold text-black mb-1">Barbiere</h3>
@@ -148,7 +148,7 @@ const BookingSuccess = () => {
                   </div>
 
                   {/* Status */}
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                  <div className="flex items-start gap-4 p-4 bg-white border border-gray-200">
                     <CheckCircle className="text-green-600 mt-1 flex-shrink-0" size={24} />
                     <div>
                       <h3 className="font-heading font-semibold text-black mb-1">Stato</h3>
@@ -163,7 +163,7 @@ const BookingSuccess = () => {
 
                   {/* Duration */}
                   {appointmentInfo.service?.duration_min && (
-                    <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                    <div className="flex items-start gap-4 p-4 bg-white border border-gray-200">
                       <Clock className="text-gold mt-1 flex-shrink-0" size={24} />
                       <div>
                         <h3 className="font-heading font-semibold text-black mb-1">Durata</h3>
@@ -192,7 +192,7 @@ const BookingSuccess = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Contact Info */}
-            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+            <div className="bg-white p-6 border border-gray-200 shadow-sm">
               <h3 className="text-xl font-heading font-semibold text-black mb-4">
                 Contatti del Salone
               </h3>
@@ -230,7 +230,7 @@ const BookingSuccess = () => {
             </div>
 
             {/* Important Notes */}
-            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+            <div className="bg-white p-6 border border-gray-200 shadow-sm">
               <h3 className="text-xl font-heading font-semibold text-black mb-4">
                 Note Importanti
               </h3>
@@ -271,13 +271,13 @@ const BookingSuccess = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => navigate('/')}
-                className="bg-gold text-black px-8 py-3 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl"
+                className="bg-gold text-black px-8 py-3 font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl"
               >
                 TORNA ALLA HOME
               </button>
               <a
                 href="tel:0248006574"
-                className="bg-white text-black border-2 border-black px-8 py-3 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-gray-50 hover:border-gold"
+                className="bg-white text-black border-2 border-black px-8 py-3 font-heading font-bold text-lg transition-all duration-300 hover:bg-gray-50 hover:border-gold"
               >
                 CHIAMA IL SALONE
               </a>

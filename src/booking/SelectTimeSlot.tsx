@@ -48,7 +48,7 @@ const TimeSlotButton = ({
 }) => (
   <button
     onClick={onClick}
-    className={`p-3 rounded-lg border-2 text-sm font-primary transition-all duration-300 ${
+    className={`p-3 border-2 text-sm font-primary transition-all duration-300 ${
       isSelected
         ? 'bg-gold text-black border-gold shadow-lg'
         : isPerfect
@@ -89,7 +89,7 @@ const InputField = ({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className="w-full p-3 border-2 border-gray-300 rounded-lg font-primary text-black placeholder-gray-400 focus:border-gold focus:outline-none transition-colors"
+      className="w-full p-3 border-2 border-gray-300 font-primary text-black placeholder-gray-400 focus:border-gold focus:outline-none transition-colors"
       required={required}
     />
   </div>
@@ -341,7 +341,7 @@ const SelectTimeSlot = () => {
       {/* Riepilogo servizio */}
       <section className="pb-8 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-          <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
+          <div className="bg-gray-50 p-6 border-2 border-gray-200">
             <h3 className="font-heading font-bold text-black mb-2">Riepilogo Prenotazione</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm font-primary">
               <div>
@@ -493,11 +493,11 @@ const SelectTimeSlot = () => {
             <button
               onClick={handleSubmit}
               disabled={!selectedTime || !customerData.name || !customerData.phone || submitting}
-              className="bg-gold text-black px-8 py-4 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+              className="bg-gold text-black px-8 py-4 font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
             >
               {submitting ? (
                 <span className="flex items-center gap-2">
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-black"></div>
+                  <div className="animate-spin h-5 w-5 border-b-2 border-black"></div>
                   Prenotazione in corso...
                 </span>
               ) : (

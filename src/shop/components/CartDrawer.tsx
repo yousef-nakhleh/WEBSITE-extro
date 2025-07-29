@@ -44,12 +44,12 @@ export default function CartDrawer({ isOpen, onClose }: Props) {
           </div>
         ) : (
           cartItems.map(({ product, quantity }) => (
-            <div key={product.id} className="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <div key={product.id} className="flex gap-4 p-4 bg-gray-50 border border-gray-200">
               {product.image_url && (
                 <img 
                   src={product.image_url} 
                   alt={product.name} 
-                  className="w-20 h-20 object-cover rounded-lg shadow-sm" 
+                  className="w-20 h-20 object-cover shadow-sm" 
                 />
               )}
               <div className="flex-1 space-y-2">
@@ -68,7 +68,7 @@ export default function CartDrawer({ isOpen, onClose }: Props) {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <button
-                      className="w-8 h-8 bg-white border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+                      className="w-8 h-8 bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors"
                       onClick={() => updateQuantity(product.id, quantity - 1)}
                       disabled={quantity <= 1}
                     >
@@ -78,7 +78,7 @@ export default function CartDrawer({ isOpen, onClose }: Props) {
                       {quantity}
                     </span>
                     <button
-                      className="w-8 h-8 bg-white border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+                      className="w-8 h-8 bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors"
                       onClick={() => updateQuantity(product.id, quantity + 1)}
                     >
                       <Plus size={14} />

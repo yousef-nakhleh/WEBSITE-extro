@@ -87,7 +87,7 @@ const GalleryPage: React.FC = () => {
             {filteredGallery.map((item, index) => (
               <div 
                 key={item.id} 
-                className="group relative overflow-hidden rounded-lg fade-in"
+                className="group relative overflow-hidden fade-in"
                 style={{ '--delay': `${index * 50}ms` } as React.CSSProperties}
               >
                 <img 
@@ -121,7 +121,7 @@ const GalleryPage: React.FC = () => {
           
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2 fade-in">
             {['/assets/photo1.png', '/assets/photo2.png', '/assets/photo3.png', '/assets/photo4.png', '/assets/photo5.png', '/assets/photo6.png'].map((image, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-lg">
+              <div key={index} className="group relative overflow-hidden">
                 <img 
                   src={image}
                   alt={`Extro Instagram ${index + 1}`}

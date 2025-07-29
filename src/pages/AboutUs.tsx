@@ -95,7 +95,7 @@ const AboutUs: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="fade-in text-center p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:border-gold transition-all">
+            <div className="fade-in text-center p-8 bg-white shadow-sm border border-gray-100 hover:border-gold transition-all">
               <Heart className="text-gold mx-auto mb-4" size={48} />
               <h3 className="text-xl font-heading font-semibold mb-3 text-black">Creatività</h3>
               <p className="text-gray-600 font-primary">
@@ -104,7 +104,7 @@ const AboutUs: React.FC = () => {
               </p>
             </div>
             
-            <div className="fade-in text-center p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:border-gold transition-all">
+            <div className="fade-in text-center p-8 bg-white shadow-sm border border-gray-100 hover:border-gold transition-all">
               <Award className="text-gold mx-auto mb-4" size={48} />
               <h3 className="text-xl font-heading font-semibold mb-3 text-black">Leadership Artistica</h3>
               <p className="text-gray-600 font-primary">
@@ -113,7 +113,7 @@ const AboutUs: React.FC = () => {
               </p>
             </div>
             
-            <div className="fade-in text-center p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:border-gold transition-all">
+            <div className="fade-in text-center p-8 bg-white shadow-sm border border-gray-100 hover:border-gold transition-all">
               <Star className="text-gold mx-auto mb-4" size={48} />
               <h3 className="text-xl font-heading font-semibold mb-3 text-black">Ricerca dell'Eccellenza</h3>
               <p className="text-gray-600 font-primary">
@@ -136,7 +136,7 @@ const AboutUs: React.FC = () => {
           <div className="max-w-3xl mx-auto">
             <div className="space-y-8">
               <div className="fade-in flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-gold rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-16 h-16 bg-gold flex items-center justify-center">
                   <Calendar className="text-black" size={24} />
                 </div>
                 <div className="flex-1 pt-2">
@@ -149,7 +149,7 @@ const AboutUs: React.FC = () => {
               </div>
               
               <div className="fade-in flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-gold rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-16 h-16 bg-gold flex items-center justify-center">
                   <MapPin className="text-black" size={24} />
                 </div>
                 <div className="flex-1 pt-2">
@@ -162,7 +162,7 @@ const AboutUs: React.FC = () => {
               </div>
               
               <div className="fade-in flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-gold rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-16 h-16 bg-gold flex items-center justify-center">
                   <Users className="text-black" size={24} />
                 </div>
                 <div className="flex-1 pt-2">
@@ -191,8 +191,8 @@ const AboutUs: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="fade-in text-center p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:border-gold transition-all">
-              <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="fade-in text-center p-8 bg-white shadow-sm border border-gray-100 hover:border-gold transition-all">
+              <div className="w-20 h-20 bg-gold flex items-center justify-center mx-auto mb-6">
                 <Users className="text-black" size={32} />
               </div>
               <h3 className="text-2xl font-heading font-semibold mb-3 text-black">Fernando Tarantini</h3>
@@ -203,8 +203,8 @@ const AboutUs: React.FC = () => {
               </p>
             </div>
             
-            <div className="fade-in text-center p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:border-gold transition-all">
-              <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="fade-in text-center p-8 bg-white shadow-sm border border-gray-100 hover:border-gold transition-all">
+              <div className="w-20 h-20 bg-gold flex items-center justify-center mx-auto mb-6">
                 <Award className="text-black" size={32} />
               </div>
               <h3 className="text-2xl font-heading font-semibold mb-3 text-black">Salvatore Sessa</h3>
@@ -222,7 +222,7 @@ const AboutUs: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center fade-in">
-            <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+            <div className="bg-gray-50 p-8 border border-gray-200">
               <h2 className="text-3xl font-heading font-bold mb-6 text-black">
                 Tradizione e Innovazione
               </h2>

@@ -95,7 +95,7 @@ const HomePage: React.FC = () => {
             ].map((service, index) => (
               <div 
                 key={index} 
-                className="group bg-white border-2 border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:border-gold transition-all duration-300 fade-in"
+                className="group bg-white border-2 border-gray-200 overflow-hidden shadow-md hover:shadow-lg hover:border-gold transition-all duration-300 fade-in"
                 style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}
               >
                 <div className="relative overflow-hidden">
@@ -154,7 +154,7 @@ const HomePage: React.FC = () => {
             ].map((item, index) => (
               <div 
                 key={index} 
-                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 fade-in"
+                className="group relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 fade-in"
                 style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}
               >
                 <img 
@@ -170,7 +170,7 @@ const HomePage: React.FC = () => {
           <div className="text-center fade-in">
             <a 
               href="tel:0248006574" 
-              className="bg-gold text-black px-8 py-3 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block"
+              className="bg-gold text-black px-8 py-3 font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block"
             >
               RICHIEDI PREVENTIVO
             </a>
@@ -211,7 +211,7 @@ const HomePage: React.FC = () => {
                   <Award className="text-gold flex-shrink-0" size={20} />
                   <span className="text-sm text-gray-700 font-primary font-medium">Prodotti Wella</span>
                 </div>
-                <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <div className="flex items-center gap-3 p-4 bg-gray-50 border border-gray-200">
                   <Award className="text-gold flex-shrink-0" size={20} />
                   <span className="text-sm text-gray-700 font-primary font-medium">Sistema Nano Hairdreams</span>
                 </div>
@@ -223,24 +223,24 @@ const HomePage: React.FC = () => {
                 <img 
                   src="/assets/story1.png" 
                   alt="Feiver Parrucchieri - Ambiente elegante" 
-                  className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md"
+                  className="w-full h-48 sm:h-64 object-cover shadow-md"
                 />
                 <img 
                   src="/assets/story2.png" 
                   alt="Prodotti professionali" 
-                  className="w-full h-48 sm:h-80 object-cover rounded-lg shadow-md"
+                  className="w-full h-48 sm:h-80 object-cover shadow-md"
                 />
               </div>
               <div className="space-y-4 mt-8">
                 <img 
                   src="/assets/story3.png" 
                   alt="Alket al lavoro" 
-                  className="w-full h-60 sm:h-80 object-cover rounded-lg shadow-md"
+                  className="w-full h-60 sm:h-80 object-cover shadow-md"
                 />
                 <img 
                   src="/assets/story4.png" 
                   alt="Dettaglio servizio" 
-                  className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-md"
+                  className="w-full h-48 sm:h-64 object-cover shadow-md"
                 />
               </div>
             </div>
@@ -266,41 +266,41 @@ const HomePage: React.FC = () => {
               <img 
                 src="/assets/photo1.png" 
                 alt="Feiver Parrucchieri - Lavoro professionale" 
-                className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             </div>
             <div>
               <img 
                 src="/assets/photo2.png" 
                 alt="Cliente soddisfatto" 
-                className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             </div>
             <div>
               <img 
                 src="/assets/photo3.png" 
                 alt="Taglio moderno" 
-                className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             </div>
             <div>
               <img 
                 src="/assets/photo4.png" 
                 alt="Dettaglio colorazione" 
-                className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             </div>
             <div>
               <img 
                 src="/assets/photo5.png" 
                 alt="Ambiente del salone" 
-                className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             </div>
           </div>
 
           <div className="text-center mt-12 fade-in">
-            <Link to="/galleria" className="bg-gold text-black px-8 py-3 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block">
+            <Link to="/galleria" className="bg-gold text-black px-8 py-3 font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block">
               SFOGLIA LA GALLERIA
             </Link>
           </div>

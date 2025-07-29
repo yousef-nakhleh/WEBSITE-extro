@@ -62,7 +62,7 @@ const Wedding: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="fade-in">
-              <div className="relative overflow-hidden rounded-lg shadow-xl">
+              <div className="relative overflow-hidden shadow-xl">
                 <img 
                   src="/assets/sposa3.png" 
                   alt="Sposa elegante con acconciatura professionale"
@@ -102,13 +102,13 @@ const Wedding: React.FC = () => {
               </div>
 
               {/* Contact CTA */}
-              <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200 text-center">
+              <div className="bg-gray-50 p-6 border-2 border-gray-200 text-center">
                 <h3 className="text-xl font-heading font-semibold text-black mb-4">
                   Vuoi saperne di più? Contattaci
                 </h3>
                 <a 
                   href="tel:0248006574" 
-                  className="bg-gold text-black px-6 py-3 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block"
+                  className="bg-gold text-black px-6 py-3 font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block"
                 >
                   CHIAMA ORA
                 </a>
@@ -162,7 +162,7 @@ const Wedding: React.FC = () => {
                 description: 'Possibilità di servizio presso la tua location per la massima comodità'
               }
             ].map((service, index) => (
-              <div key={index} className="fade-in text-center p-6 bg-white rounded-lg shadow-sm border border-gray-200 hover:border-gold transition-all">
+              <div key={index} className="fade-in text-center p-6 bg-white shadow-sm border border-gray-200 hover:border-gold transition-all">
                 <div className="mb-4 flex justify-center">
                   {service.icon}
                 </div>
@@ -205,7 +205,7 @@ const Wedding: React.FC = () => {
                 }
               ].map((process, index) => (
                 <div key={index} className="fade-in flex items-start gap-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gold rounded-full flex items-center justify-center">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gold flex items-center justify-center">
                     <span className="text-black font-heading font-bold text-lg">{process.step}</span>
                   </div>
                   <div className="flex-1 pt-2">
@@ -223,7 +223,7 @@ const Wedding: React.FC = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center fade-in">
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+            <div className="bg-white p-8 shadow-sm border border-gray-200">
               <div className="mb-6">
                 <div className="flex justify-center mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -260,14 +260,14 @@ const Wedding: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:0248006574" 
-                className="flex items-center justify-center gap-3 bg-gold text-black px-8 py-4 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl"
+                className="flex items-center justify-center gap-3 bg-gold text-black px-8 py-4 font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl"
               >
                 <Phone size={20} />
                 CHIAMA ORA
               </a>
               <a 
                 href="/prenota/servizio" 
-                className="bg-white text-black border-2 border-white px-8 py-4 rounded-lg font-heading font-bold text-lg transition-all duration-300 hover:bg-gray-100"
+                className="bg-white text-black border-2 border-white px-8 py-4 font-heading font-bold text-lg transition-all duration-300 hover:bg-gray-100"
               >
                 PRENOTA CONSULENZA
               </a>
