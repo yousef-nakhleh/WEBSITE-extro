@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
       <section className="h-screen relative flex items-center">
         <div className="absolute inset-0 bg-black">
           <div 
-            className="absolute inset-0 bg-center bg-cover opacity-50"
+            className="absolute inset-0 bg-center bg-cover opacity-100"
             style={{ backgroundImage: "url('/assets/background2.png')" }} 
           ></div>
         </div>
