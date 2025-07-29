@@ -54,6 +54,7 @@ const HomePage: React.FC = () => {
             <div className="flex flex-wrap gap-4 fade-in" style={{ '--delay': '300ms' } as React.CSSProperties}>
               <Link to="/prenota/servizio" className="btn btn-primary">PRENOTA ORA</Link>
               <Link to="/servizi" className="btn btn-outline">SCOPRI I SERVIZI</Link>
+              <a href="tel:0248006574" className="btn btn-outline">PARLA CON NOI</a>
             </div>
           </div>
         </div>
