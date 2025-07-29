@@ -125,11 +125,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <Link 
                     to="/servizi" 
-                    className={`px-6 py-2 uppercase tracking-wider transition-all duration-300 inline-block text-white font-medium ${
-                      isSpeaking 
-                        ? 'bg-red-600 border border-red-600 hover:bg-red-700 hover:border-red-700' 
-                        : 'bg-green-600 border border-green-600 hover:bg-green-700 hover:border-green-700'
-                    }`}
+                    className="flex items-center text-gold hover:text-black transition-colors group/link"
                   >
                     <span className="mr-2 font-primary font-medium">Scopri di più</span>
                     <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
