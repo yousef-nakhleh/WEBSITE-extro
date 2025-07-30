@@ -6,6 +6,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './calendar-styles.css';
 import { getAvailableTimeSlots } from '../lib/availability';
+import WaitingList from './WaitingList';
 
 /* ---------- TIPI ---------- */
 interface Service { 
@@ -445,6 +446,14 @@ const SelectTimeSlot = () => {
                 </p>
               </div>
             )}
+
+            <div className="pt-6">
+              <WaitingList
+                selectedBarberName={selectedBarber !== 'any' ? selectedBarber.name : undefined}
+                selectedServiceName={service.name}
+                selectedDate={format(date, 'yyyy-MM-dd')}
+              />
+            </div>
           </div>
         </div>
       </section>
