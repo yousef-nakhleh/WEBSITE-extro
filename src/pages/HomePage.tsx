@@ -154,7 +154,7 @@ const HomePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
               { image: '/assets/extention1.png', alt: 'Extension naturali - Prima' },
               { image: '/assets/extention2.png', alt: 'Extension naturali - Dopo' },
@@ -163,15 +163,13 @@ const HomePage: React.FC = () => {
             ].map((item, index) => (
               <div 
                 key={index} 
-                className={`group relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 fade-in ${
-                  index === 0 || index === 3 ? 'sm:col-span-2' : ''
-                }`}
+                className="group relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 fade-in"
                 style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}
               >
                 <img 
                   src={item.image}
                   alt={item.alt}
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
