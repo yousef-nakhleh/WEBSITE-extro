@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
   return (
     <main>
       {/* Hero Section - UNCHANGED */}
-      <section className="h-screen relative flex items-center">
+      <section className="min-h-[calc(100vh-88px)] mt-[88px] relative flex items-center">
         <div className="absolute inset-0 bg-black">
           <div 
             className="absolute inset-0 bg-center bg-cover opacity-80"
