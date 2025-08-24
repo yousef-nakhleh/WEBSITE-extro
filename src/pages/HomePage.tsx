@@ -13,7 +13,7 @@ export default function HomePage() {
       >
         {/* Background image */}
         <div
-          className="absolute inset-0 bg-[url('/assets/saloon.png')] bg-cover bg-center"
+          className="absolute inset-0 bg-[url('public//assets/saloon.png')] bg-cover bg-center"
           aria-hidden="true"
         />
         {/* Optional dark overlay for contrast */}
