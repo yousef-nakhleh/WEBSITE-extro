@@ -5,7 +5,7 @@ const YT_ID = "_GSc3uAm8rQ";
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
-      {/* Navbar (from your existing component) */}
+      {/* Navbar */}
       <Navbar />
 
       {/* Full viewport hero with YouTube background */}
@@ -13,23 +13,24 @@ export default function HomePage() {
         className="relative flex h-screen w-full items-center justify-center overflow-hidden"
         aria-label="EXTRO Parrucchieri landing hero"
       >
-        {/* YouTube background (fills viewport) */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0">
-            <iframe
-              className="absolute top-0 left-0 h-full w-full"
-              // Important: autoplay requires mute; loop needs playlist=VIDEO_ID
-              src={`https://www.youtube.com/embed/${YT_ID}?autoplay=1&mute=1&controls=0&playsinline=1&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=${YT_ID}`}
-              title="EXTRO Parrucchieri"
-              frameBorder="0"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowFullScreen
-              // Prevent the iframe from capturing pointer events so the CTA is clickable
-              style={{ pointerEvents: "none" }}
-            />
-          </div>
-          {/* Optional dark overlay for contrast */}
-          <div className="absolute inset-0 bg-black/25" />
+        {/* YouTube background (cover) */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <iframe
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            // Scale the iframe to always cover the viewport (16:9 math)
+            style={{
+              width: "max(100vw, 177.78vh)",   // 16/9 = 1.7778 → 177.78vh covers tall viewports
+              height: "max(56.25vw, 100vh)",   // 9/16 = 0.5625 → 56.25vw covers wide viewports
+              pointerEvents: "none",
+            }}
+            src={`https://www.youtube.com/embed/${YT_ID}?autoplay=1&mute=1&controls=0&playsinline=1&modestbranding=1&rel=0&loop=1&playlist=${YT_ID}`}
+            title="EXTRO Parrucchieri"
+            frameBorder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowFullScreen
+          />
+          {/* Optional slight overlay for contrast; lower if it feels too dark */}
+          <div className="absolute inset-0 bg-black/10" />
         </div>
 
         {/* Centered CTA: sharp rectangle (no rounded corners) */}
