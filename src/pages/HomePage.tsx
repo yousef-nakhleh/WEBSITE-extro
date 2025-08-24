@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 
-const YT_ID = "_GSc3uAm8rQ";
+const YT_ID = "_Hf6abfL1la4";
 
 export default function HomePage() {
   return (
