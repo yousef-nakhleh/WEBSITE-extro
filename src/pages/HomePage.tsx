@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
@@ -7,9 +6,9 @@ export default function HomePage() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Landing: single full-bleed image with centered CTA */}
+      {/* Full viewport hero image with centered CTA */}
       <main
-        className="relative flex h-[92vh] w-full items-center justify-center overflow-hidden md:h-[94vh]"
+        className="relative flex h-screen w-full items-center justify-center overflow-hidden"
         aria-label="EXTRO Parrucchieri landing hero"
       >
         {/* Background image */}
@@ -17,13 +16,13 @@ export default function HomePage() {
           className="absolute inset-0 bg-[url('/assets/saloon.png')] bg-cover bg-center"
           aria-hidden="true"
         />
-        {/* Optional overlay for readability */}
+        {/* Optional dark overlay for contrast */}
         <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
 
-        {/* Center CTA: sharp rectangle */}
+        {/* Centered CTA */}
         <a
           href="#booking"
-          className="relative z-10 select-none px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-black bg-white shadow-xl hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-white/70"
+          className="relative z-10 bg-white px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-black shadow-xl hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-white/70"
         >
           PRENOTA ORA
         </a>
@@ -35,9 +34,6 @@ export default function HomePage() {
           Un&apos;esperienza trentennale
         </p>
       </section>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
