@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import Footer from ../components/Footer";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
@@ -17,10 +17,10 @@ export default function HomePage() {
           className="absolute inset-0 bg-[url('/assets/saloon.png')] bg-cover bg-center"
           aria-hidden="true"
         />
-        {/* Readability overlay (very subtle) */}
+        {/* Optional overlay for readability */}
         <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
 
-        {/* Center CTA: sharp rectangle, no rounded corners */}
+        {/* Center CTA: sharp rectangle */}
         <a
           href="#booking"
           className="relative z-10 select-none px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-black bg-white shadow-xl hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-white/70"
@@ -32,10 +32,11 @@ export default function HomePage() {
       {/* Tagline below hero */}
       <section className="bg-white py-10 text-center text-neutral-900">
         <p className="mx-auto max-w-4xl px-6 text-xl italic md:text-2xl">
-          Un'esperienza trentennale
+          Un&apos;esperienza trentennale
         </p>
       </section>
 
+      {/* Footer */}
       <Footer />
     </div>
   );
