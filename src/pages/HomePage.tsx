@@ -1,292 +1,224 @@
-import React, { useEffect } from 'react';
-import { ArrowRight, MapPin, Clock, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useVapi } from '../context/VapiContext'; // ✅ IMPORTED
+import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-const HomePage: React.FC = () => {
-  const { startCall, stopCall, isConnected } = useVapi(); // ✅ USE VAPI HOOK
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const elements = document.querySelectorAll('.fade-in');
-      elements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight * 0.8;
-        if (isVisible) {
-          el.classList.add('active');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+export default function HomePage() {
   return (
-    <main className="pt-[88px]">
-      {/* Hero Section - UNCHANGED */}
-      <section className="min-h-[calc(100vh-88px)] relative flex items-center">
-        <div className="absolute inset-0 bg-black">
-          <div 
-            className="absolute inset-0 bg-center bg-cover opacity-80"
-            style={{ backgroundImage: "url('/assets/background2.png')" }} 
-          ></div>
+    <div className="min-h-screen bg-white text-neutral-900">
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Hero */}
+      <section
+        className="relative flex items-center justify-center overflow-hidden bg-neutral-950 text-white"
+        aria-label="Hero: Luxury Hair, Timeless Style"
+      >
+        <div className="absolute inset-0">
+          {/* Replace src with real hero image/video */}
+          <img
+            src="/images/hero-salon.jpg"
+            alt="Elegant interior of EXTRO Parrucchieri luxury salon"
+            className="h-[72vh] w-full object-cover opacity-60 md:h-[82vh]"
+          />
         </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-heading font-bold mb-4 fade-in" style={{ '--delay': '100ms' } as React.CSSProperties}>
-              EXTRO<br />
-              <span className="text-gold">PARRUCCHIERI MILANO</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 mb-6 max-w-2xl fade-in" style={{ '--delay': '200ms' } as React.CSSProperties}>
-              Diamo forma alle emozioni. Il nostro team ti offre un'esperienza unica con i migliori prodotti e le tecniche più avanzate.
-            </p>
-            <div className="flex items-center gap-6 mb-8 fade-in" style={{ '--delay': '250ms' } as React.CSSProperties}>
-              <div className="flex items-center gap-2 text-gold">
-                <MapPin size={18} />
-                <span className="text-sm">Corso Magenta, 79, 20123 Milano MI</span>
-              </div>
-              <div className="flex items-center gap-2 text-gold">
-                <Clock size={18} />
-                <span className="text-sm">4m a piedi dalla fermata di Conciliazione</span>
-              </div>
-            </div>
-            <div className="w-20 h-[1px] bg-gold mb-8"></div>
-            <div className="flex flex-wrap gap-4 fade-in" style={{ '--delay': '300ms' } as React.CSSProperties}>
-              <Link to="/prenota/servizio" className="btn btn-primary">PRENOTA ORA</Link>
-              <Link to="/servizi" className="btn btn-outline">SCOPRI I SERVIZI</Link>
-              <button
-                onClick={isConnected ? stopCall : startCall}
-                className="btn btn-outline"
-              >
-                {isConnected ? 'TERMINA CHIAMATA' : 'PARLA CON NOI'}
-              </button>
-            </div>
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24 text-center md:py-32">
+          <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+            Luxury Hair. Timeless Style.
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-200 md:text-lg">
+            Experience Italian excellence in hair design at EXTRO Parrucchieri.
+          </p>
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <a
+              href="#booking"
+              className="rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-300"
+            >
+              Book Your Experience
+            </a>
+            <a
+              href="#services"
+              className="rounded-full border border-white/30 px-6 py-3 text-sm font-semibold transition hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+            >
+              Discover Our Services
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Services Preview - UPDATED TO WHITE */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-12 fade-in">
-            <h5 className="text-gray-600 tracking-widest uppercase mb-2 font-primary">
-              Servizi Specializzati
-            </h5>
-            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-black">
-              I NOSTRI SERVIZI
-            </h2>
-            <div className="w-20 h-[2px] bg-gold mx-auto mb-6"></div>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto font-primary">
-              Servizi per capelli a tutto tondo: tagli, pieghe, colore e trattamenti specializzati per la chioma
+      {/* Heritage / Trust */}
+      <section id="about" className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-semibold md:text-3xl">A Tradition of Excellence</h2>
+            <p className="mt-3 text-neutral-600">
+              For decades, EXTRO Parrucchieri has been a symbol of Italian style and elegance. Our
+              award‑winning team blends craftsmanship and couture techniques for a truly bespoke
+              experience.
             </p>
+            <div className="mt-6 flex gap-4">
+              <div className="rounded-xl bg-neutral-100 px-4 py-3 text-sm font-medium">35+ Years</div>
+              <div className="rounded-xl bg-neutral-100 px-4 py-3 text-sm font-medium">Awarded Stylists</div>
+              <div className="rounded-xl bg-neutral-100 px-4 py-3 text-sm font-medium">Premium Products</div>
+            </div>
+          </div>
+          <div className="relative h-64 w-full overflow-hidden rounded-2xl md:h-80">
+            <img
+              src="/images/founder.jpg"
+              alt="Founder and master stylist at EXTRO Parrucchieri"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview (conversion) */}
+      <section id="services" className="bg-neutral-50 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-8 flex items-end justify-between">
+            <h2 className="text-2xl font-semibold md:text-3xl">Our Services</h2>
+            <a
+              href="#booking"
+              className="hidden rounded-full bg-neutral-900 px-5 py-2 text-sm font-semibold text-white transition hover:bg-neutral-800 md:inline-block"
+            >
+              Book Now
+            </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              {
-                title: 'Acconciature',
-                
-                image: '/assets/capelli.png'
-              },
-              {
-                title: 'Beauty',
-                
-                image: '/assets/beauty.png'
-              },
-              {
-                title: 'Servizio sposa',
-                
-                image: '/assets/sposa.png'
-              }
-            ].map((service, index) => (
-              <div 
-                key={index} 
-                className="group bg-white border-2 border-gray-200 overflow-hidden shadow-md hover:shadow-lg hover:border-gold transition-all duration-300 fade-in"
-                style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}
-              >
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              { title: "Haircuts", desc: "Precision styling tailored to you.", img: "/images/service-haircut.jpg" },
+              { title: "Styling", desc: "Signature blow-dries & updos.", img: "/images/service-styling.jpg" },
+              { title: "Color", desc: "Luxury color and blonding services.", img: "/images/service-color.jpg" },
+              { title: "Treatments", desc: "Revitalizing, bond-building care.", img: "/images/service-treatment.jpg" },
+            ].map((s) => (
+              <article key={s.title} className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
+                <div className="h-44 w-full overflow-hidden">
+                  <img src={s.img} alt={s.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
                 </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl font-heading font-bold mb-3 text-black group-hover:text-gold transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 font-primary text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  <Link 
-                    to="/servizi" 
-                    className="flex items-center text-gold hover:text-black transition-colors group/link"
+                <div className="p-5">
+                  <h3 className="text-lg font-semibold">{s.title}</h3>
+                  <p className="mt-1 text-sm text-neutral-600">{s.desc}</p>
+                  <a
+                    href="#booking"
+                    className="mt-4 inline-block rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-neutral-900 transition hover:bg-amber-400"
                   >
-                    <span className="mr-2 font-primary font-medium">Scopri di più</span>
-                    <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+                    Book Now
+                  </a>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Extension Section - NEW */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-12 fade-in">
-            <h5 className="text-gray-600 tracking-widest uppercase mb-2 font-primary">
-              Servizi Specializzati
-            </h5>
-            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-black">
-              EXTENSION
-            </h2>
-            <div className="w-20 h-[2px] bg-gold mx-auto mb-6"></div>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto font-primary">
-              Trasforma il tuo look con le nostre extension professionali. Utilizziamo il sistema innovativo 
-              Nano Hairdreams per risultati naturali e duraturi che valorizzano la tua bellezza.
+      {/* Luxury Experience / Differentiation */}
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div className="order-2 md:order-1">
+            <h2 className="text-2xl font-semibold md:text-3xl">The Luxury Salon Experience</h2>
+            <p className="mt-3 text-neutral-600">
+              From private consultations to curated product rituals, every moment is designed for
+              comfort and confidence. Enjoy complimentary refreshments, tailored after‑care advice,
+              and a serene atmosphere.
+            </p>
+            <ul className="mt-5 grid gap-3 text-sm text-neutral-700 sm:grid-cols-2">
+              <li>• Personalized consultations</li>
+              <li>• Premium care rituals</li>
+              <li>• Bridal & event services</li>
+              <li>• Discreet, by-appointment options</li>
+            </ul>
+          </div>
+          <div className="order-1 relative h-64 w-full overflow-hidden rounded-2xl md:order-2 md:h-80">
+            <img
+              src="/images/lounge.jpg"
+              alt="Warm, elegant lounge area inside the salon"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="bg-neutral-50 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="text-2xl font-semibold md:text-3xl">What Our Clients Say</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {[
+              { quote: "The best salon experience I’ve ever had. True luxury.", name: "Anna R." },
+              { quote: "Attention to detail and personalized care are unmatched.", name: "Marco P." },
+              { quote: "EXTRO transformed my look—couldn’t be happier.", name: "Chiara L." },
+            ].map((t, i) => (
+              <figure key={i} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+                <blockquote className="text-neutral-700">“{t.quote}”</blockquote>
+                <figcaption className="mt-3 text-sm font-semibold">— {t.name}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Offer / Lead Magnet */}
+      <section id="offers" className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="grid items-center gap-8 rounded-3xl bg-neutral-900 px-6 py-10 text-white md:grid-cols-2 md:px-10">
+          <div>
+            <h3 className="text-2xl font-semibold">Exclusive Offer</h3>
+            <p className="mt-2 text-neutral-200">
+              New clients enjoy <span className="font-semibold">20% off</span> their first appointment. Limited availability.
             </p>
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            {[
-              { image: '/assets/extention1.png', alt: 'Extension naturali - Prima' },
-              { image: '/assets/extention2.png', alt: 'Extension naturali - Dopo' },
-              { image: '/assets/extention3.png', alt: 'Applicazione extension professionale' },
-              { image: '/assets/extention4.png', alt: 'Risultato finale extension' }
-            ].map((item, index) => (
-              <div 
-                key={index} 
-                className="group relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 fade-in"
-                style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}
-              >
-                <img 
-                  src={item.image}
-                  alt={item.alt}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mb-8 fade-in">
-            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-black">
-              CHI SIAMO: una storia trentennale
-            </h2>
-            <div className="w-20 h-[2px] bg-gold mx-auto"></div>
-          </div>
+          <form
+            className="flex w-full flex-col gap-3 md:flex-row"
+            onSubmit={(e) => {
+              e.preventDefault();
+              // Hook up to your form / CRM / chatbot handoff
+              alert("Thanks! We will be in touch shortly.");
+            }}
+          >
+            <input
+              type="email"
+              required
+              placeholder="Email address"
+              className="w-full rounded-full bg-white/10 px-5 py-3 text-white placeholder-neutral-300 outline-none ring-1 ring-white/20 focus:ring-2 focus:ring-amber-400"
+              aria-label="Email address"
+            />
+            <button
+              type="submit"
+              className="rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-amber-400"
+            >
+              Redeem Offer
+            </button>
+          </form>
         </div>
       </section>
 
-      {/* Scrolling About Image Section */}
-      <section 
-        className="relative h-screen overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
-        style={{ 
-          backgroundImage: "url('/assets/aboutus.png')"
+      {/* Bottom CTA */}
+      <section className="bg-neutral-50 py-14">
+        <div className="mx-auto max-w-6xl px-6 text-center">
+          <h2 className="text-2xl font-semibold md:text-3xl">Ready for Your Luxury Experience?</h2>
+          <a
+            id="booking"
+            href="/booking" // replace with booking route or external link
+            className="mt-6 inline-block rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-amber-400"
+          >
+            Reserve Now
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Chatbot Launcher (placeholder) */}
+      <button
+        aria-label="Open chat"
+        className="fixed bottom-5 right-5 z-50 rounded-full bg-neutral-900 px-5 py-4 text-sm font-semibold text-white shadow-xl transition hover:bg-neutral-800"
+        onClick={() => {
+          // Replace with your chatbot open command/hook
+          alert("Opening chat…");
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center fade-in">
-            <Link 
-              to="/chi-siamo" 
-              className="bg-gold text-black px-8 py-4 font-heading font-bold text-xl transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block"
-            >
-              SCOPRI DI PIÙ
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Preview - UPDATED TO WHITE */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-12 fade-in">
-            <h5 className="text-gray-600 tracking-widest uppercase mb-2 font-primary">
-              Il Nostro Lavoro
-            </h5>
-            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-black">
-              GALLERIA
-            </h2>
-            <div className="w-20 h-[2px] bg-gold mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in">
-            <div className="col-span-2 row-span-2">
-              <img 
-                src="/assets/photo1.png" 
-                alt="Feiver Parrucchieri - Lavoro professionale" 
-                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
-              />
-            </div>
-            <div>
-              <img 
-                src="/assets/photo2.png" 
-                alt="Cliente soddisfatto" 
-                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
-              />
-            </div>
-            <div>
-              <img 
-                src="/assets/photo3.png" 
-                alt="Taglio moderno" 
-                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
-              />
-            </div>
-            <div>
-              <img 
-                src="/assets/photo4.png" 
-                alt="Dettaglio colorazione" 
-                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
-              />
-            </div>
-            <div>
-              <img 
-                src="/assets/photo5.png" 
-                alt="Ambiente del salone" 
-                className="w-full h-full object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
-              />
-            </div>
-          </div>
-
-          <div className="text-center mt-12 fade-in">
-            <Link to="/galleria" className="bg-gold text-black px-8 py-3 font-heading font-bold text-lg transition-all duration-300 hover:bg-opacity-90 shadow-lg hover:shadow-xl inline-block">
-              SFOGLIA LA GALLERIA
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action - UNCHANGED (keeps the black background with image overlay) */}
-      <section className="py-24 relative">
-        <div className="absolute inset-0 bg-black">
-          <div 
-            className="absolute inset-0 bg-center bg-cover opacity-30"
-            style={{ backgroundImage: "url('/assets/photo6.png')" }}
-          ></div>
-        </div>
-        <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
-          <div className="max-w-2xl mx-auto fade-in">
-            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6">Prenota Il Tuo Appuntamento</h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Affidati all'esperienza del nostro team. Prenota ora per un'esperienza di bellezza unica nel cuore di Milano.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/prenota/servizio" className="btn btn-primary text-lg px-8 py-3">PRENOTA ORA</Link>
-              <a href="tel:0297383541" className="btn btn-outline text-lg px-8 py-3">CHIAMA ORA</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+        Chat with Us
+      </button>
+    </div>
   );
-};
-
-export default HomePage;
+}
