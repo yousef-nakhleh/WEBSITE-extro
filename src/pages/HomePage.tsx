@@ -7,6 +7,7 @@ export default function HomePage() {
     <div className="flex min-h-screen flex-col bg-black text-white">
       <Navbar />
 
+      {/* HERO */}
       <main
         className="relative flex h-screen w-full items-center justify-center overflow-hidden"
         aria-label="EXTRO Parrucchieri landing hero"
@@ -26,7 +27,6 @@ export default function HomePage() {
             allow="autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
           />
-          {/* Light overlay for contrast */}
           <div className="absolute inset-0 bg-black/15" />
         </div>
 
@@ -51,7 +51,134 @@ export default function HomePage() {
         </div>
       </main>
 
-      {/* Local animation for a gentle scale-in of the CTA */}
+      {/* SERVICES MOSAIC (below the landing) */}
+      <section
+        id="servizi"
+        className="relative isolate bg-white text-neutral-900"
+      >
+        {/* subtle frame bar to echo the reference style */}
+        <div className="absolute -top-6 left-0 right-0 mx-auto h-6 w-2/3 bg-[#d3bda6]/60 pointer-events-none" />
+
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+          <div className="grid gap-5 md:grid-cols-3">
+            {/* Column 1 */}
+            <div className="grid gap-5">
+              {/* Text card: STYLING */}
+              <article className="flex flex-col justify-between bg-white p-6 shadow-sm ring-1 ring-black/5">
+                <h3 className="text-xl font-semibold tracking-wide">STYLING</h3>
+                <p className="mt-3 text-sm text-neutral-600">
+                  Piega signature, onde morbide e finish couture per ogni
+                  occasione. Consulenza personalizzata inclusa.
+                </p>
+                <a
+                  href="#booking"
+                  className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 hover:opacity-80"
+                >
+                  Prenota →
+                </a>
+              </article>
+
+              {/* Image tile */}
+              <div className="aspect-[4/3] overflow-hidden bg-neutral-100">
+                <img
+                  src="/assets/services/styling.jpg"
+                  alt="Styling"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              {/* Text card: COLOR */}
+              <article className="flex flex-col justify-between bg-white p-6 shadow-sm ring-1 ring-black/5">
+                <h3 className="text-xl font-semibold tracking-wide">COLOR</h3>
+                <p className="mt-3 text-sm text-neutral-600">
+                  Colorazioni su misura, balayage e blonding con prodotti di
+                  alta gamma e protocolli di protezione del capello.
+                </p>
+                <a
+                  href="#booking"
+                  className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 hover:opacity-80"
+                >
+                  Prenota →
+                </a>
+              </article>
+            </div>
+
+            {/* Column 2 */}
+            <div className="grid gap-5">
+              {/* Large image */}
+              <div className="aspect-square overflow-hidden bg-neutral-100">
+                <img
+                  src="/assets/services/hero-grid.jpg"
+                  alt="EXTRO lookbook"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              {/* Text card: SPECIALS */}
+              <article className="flex flex-col justify-between bg-white p-6 shadow-sm ring-1 ring-black/5">
+                <h3 className="text-xl font-semibold tracking-wide">SPECIALS</h3>
+                <p className="mt-3 text-sm text-neutral-600">
+                  Rituals di trattamento, pacchetti stagionali e servizi
+                  esclusivi per eventi e shooting.
+                </p>
+                <a
+                  href="#booking"
+                  className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 hover:opacity-80"
+                >
+                  Prenota →
+                </a>
+              </article>
+
+              {/* Image tile */}
+              <div className="aspect-[4/3] overflow-hidden bg-neutral-100">
+                <img
+                  src="/assets/services/specials.jpg"
+                  alt="Special treatments"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Column 3 */}
+            <div className="grid gap-5">
+              {/* Text card: HAIRCUT */}
+              <article className="flex flex-col justify-between bg-white p-6 shadow-sm ring-1 ring-black/5">
+                <h3 className="text-xl font-semibold tracking-wide">HAIRCUT</h3>
+                <p className="mt-3 text-sm text-neutral-600">
+                  Tagli sartoriali costruiti sulle proporzioni del viso e sullo
+                  stile personale. Finish incluso.
+                </p>
+                <a
+                  href="#booking"
+                  className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 hover:opacity-80"
+                >
+                  Prenota →
+                </a>
+              </article>
+
+              {/* Image tile */}
+              <div className="aspect-[4/3] overflow-hidden bg-neutral-100">
+                <img
+                  src="/assets/services/haircut.jpg"
+                  alt="Haircut"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              {/* Image tile */}
+              <div className="aspect-square overflow-hidden bg-neutral-100">
+                <img
+                  src="/assets/services/color.jpg"
+                  alt="Color service"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local animation for the CTA */}
       <style>{`
         @keyframes cta-pop {
           0%   { transform: scale(0.85); opacity: 0; }
