@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight, MapPin, Clock, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useVapi } from '../context/VapiContext'; // ✅ IMPORTED
@@ -23,6 +23,54 @@ const HomePage: React.FC = () => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // ================================
+  // 🔶 SCROLL DEPTH 50% — DEFINITION (HIGHLIGHT)
+  // This useEffect detects when the user reaches 50% scroll depth on the homepage
+  // and fires a CustomEvent `VF_SCROLL_50_HOME` once per page view.
+  // We'll wire this to the Voiceflow SDK in the next step.
+  // ================================
+  const firedScroll50Ref = useRef(false);
+
+  useEffect(() => {
+    const computeScrollPct = () => {
+      const doc = document.documentElement;
+      const totalScrollable = doc.scrollHeight - window.innerHeight;
+      if (totalScrollable <= 0) return 100; // very short pages count as fully visible
+      return Math.round((window.scrollY / totalScrollable) * 100);
+    };
+
+    const onScrollDepthCheck = () => {
+      if (firedScroll50Ref.current) return;
+      const pct = computeScrollPct();
+      if (pct >= 50) {
+        firedScroll50Ref.current = true;
+        // Fire a page-level event we can hook later to the SDK
+        const detail = { scrollDepth: pct, path: window.location.pathname, page: 'home' };
+        window.dispatchEvent(new CustomEvent('VF_SCROLL_50_HOME', { detail }));
+        // (Optional) for quick visibility during testing:
+        // console.log('[VF] Scroll 50% reached on home:', detail);
+      }
+    };
+
+    // throttle with rAF
+    let rafId: number | null = null;
+    const onScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(onScrollDepthCheck);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // check immediately on mount in case user lands mid-page
+    onScrollDepthCheck();
+
+    return () => {
+      window.removeEventListener('scroll', onScroll as any);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, []);
+  // 🔶 END SCROLL DEPTH 50% — DEFINITION
+  // ================================
 
   return (
     <main className="pt-[88px]">
