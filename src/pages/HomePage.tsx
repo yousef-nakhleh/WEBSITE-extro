@@ -27,6 +27,7 @@ export default function HomePage() {
             allow="autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
           />
+          {/* Light overlay for contrast */}
           <div className="absolute inset-0 bg-black/15" />
         </div>
 
@@ -56,14 +57,13 @@ export default function HomePage() {
         id="servizi"
         className="relative isolate bg-white text-neutral-900"
       >
-        {/* subtle frame bar to echo the reference style */}
+        {/* subtle frame bar */}
         <div className="absolute -top-6 left-0 right-0 mx-auto h-6 w-2/3 bg-[#d3bda6]/60 pointer-events-none" />
 
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <div className="grid gap-5 md:grid-cols-3">
             {/* Column 1 */}
             <div className="grid gap-5">
-              {/* Text card: STYLING */}
               <article className="flex flex-col justify-between bg-white p-6 shadow-sm ring-1 ring-black/5">
                 <h3 className="text-xl font-semibold tracking-wide">STYLING</h3>
                 <p className="mt-3 text-sm text-neutral-600">
@@ -78,7 +78,6 @@ export default function HomePage() {
                 </a>
               </article>
 
-              {/* Image tile */}
               <div className="aspect-[4/3] overflow-hidden bg-neutral-100">
                 <img
                   src="/assets/services/styling.jpg"
@@ -87,7 +86,6 @@ export default function HomePage() {
                 />
               </div>
 
-              {/* Text card: COLOR */}
               <article className="flex flex-col justify-between bg-white p-6 shadow-sm ring-1 ring-black/5">
                 <h3 className="text-xl font-semibold tracking-wide">COLOR</h3>
                 <p className="mt-3 text-sm text-neutral-600">
@@ -105,7 +103,6 @@ export default function HomePage() {
 
             {/* Column 2 */}
             <div className="grid gap-5">
-              {/* Large image */}
               <div className="aspect-square overflow-hidden bg-neutral-100">
                 <img
                   src="/assets/services/hero-grid.jpg"
@@ -114,7 +111,6 @@ export default function HomePage() {
                 />
               </div>
 
-              {/* Text card: SPECIALS */}
               <article className="flex flex-col justify-between bg-white p-6 shadow-sm ring-1 ring-black/5">
                 <h3 className="text-xl font-semibold tracking-wide">SPECIALS</h3>
                 <p className="mt-3 text-sm text-neutral-600">
@@ -129,7 +125,6 @@ export default function HomePage() {
                 </a>
               </article>
 
-              {/* Image tile */}
               <div className="aspect-[4/3] overflow-hidden bg-neutral-100">
                 <img
                   src="/assets/services/specials.jpg"
@@ -141,7 +136,6 @@ export default function HomePage() {
 
             {/* Column 3 */}
             <div className="grid gap-5">
-              {/* Text card: HAIRCUT */}
               <article className="flex flex-col justify-between bg-white p-6 shadow-sm ring-1 ring-black/5">
                 <h3 className="text-xl font-semibold tracking-wide">HAIRCUT</h3>
                 <p className="mt-3 text-sm text-neutral-600">
@@ -156,7 +150,6 @@ export default function HomePage() {
                 </a>
               </article>
 
-              {/* Image tile */}
               <div className="aspect-[4/3] overflow-hidden bg-neutral-100">
                 <img
                   src="/assets/services/haircut.jpg"
@@ -165,7 +158,6 @@ export default function HomePage() {
                 />
               </div>
 
-              {/* Image tile */}
               <div className="aspect-square overflow-hidden bg-neutral-100">
                 <img
                   src="/assets/services/color.jpg"
@@ -178,7 +170,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Local animation for the CTA */}
+      {/* SCROLLING IMAGES STRIP (5 images in one line, auto-scroll) */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl overflow-hidden py-10">
+          <div className="relative">
+            <div className="marquee flex gap-4">
+              {/* Set A */}
+              <img src="/photo1.png" alt="EXTRO photo 1" className="h-44 w-auto object-cover" />
+              <img src="/photo2.png" alt="EXTRO photo 2" className="h-44 w-auto object-cover" />
+              <img src="/photo3.png" alt="EXTRO photo 3" className="h-44 w-auto object-cover" />
+              <img src="/photo4.png" alt="EXTRO photo 4" className="h-44 w-auto object-cover" />
+              <img src="/photo5.png" alt="EXTRO photo 5" className="h-44 w-auto object-cover" />
+              {/* Set B (duplicate for seamless loop) */}
+              <img src="/photo1.png" alt="EXTRO photo 1" className="h-44 w-auto object-cover" />
+              <img src="/photo2.png" alt="EXTRO photo 2" className="h-44 w-auto object-cover" />
+              <img src="/photo3.png" alt="EXTRO photo 3" className="h-44 w-auto object-cover" />
+              <img src="/photo4.png" alt="EXTRO photo 4" className="h-44 w-auto object-cover" />
+              <img src="/photo5.png" alt="EXTRO photo 5" className="h-44 w-auto object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PARALLAX STORY SECTION */}
+      <section
+        className="relative flex min-h-[70vh] items-center justify-center overflow-hidden"
+        aria-label="La nostra storia"
+      >
+        {/* fixed background */}
+        <div className="absolute inset-0 bg-fixed bg-center bg-cover" style={{ backgroundImage: "url('/story.png')" }} />
+        {/* overlay for contrast */}
+        <div className="absolute inset-0 bg-black/20" />
+        {/* centered CTA */}
+        <a
+          href="/chi-siamo"
+          className="relative z-10 select-none bg-white px-8 py-4 text-sm md:text-base font-semibold uppercase tracking-[0.12em] text-black shadow-xl hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-white/70"
+        >
+          la nostra storia
+        </a>
+      </section>
+
+      {/* Local animations/styles */}
       <style>{`
         @keyframes cta-pop {
           0%   { transform: scale(0.85); opacity: 0; }
@@ -186,6 +218,16 @@ export default function HomePage() {
           100% { transform: scale(1); opacity: 1; }
         }
         .animate-cta-pop { animation: cta-pop 600ms cubic-bezier(.2,.9,.2,1) both; }
+
+        /* Marquee */
+        .marquee {
+          width: max-content;
+          animation: marquee-scroll 25s linear infinite;
+        }
+        @keyframes marquee-scroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); } /* move by half because we duplicated the set */
+        }
       `}</style>
     </div>
   );
