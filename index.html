@@ -11,7 +11,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Voiceflow widget embed -->
+    <!-- Voiceflow widget embed + trigger injection -->
     <script type="text/javascript">
       (function(d, t) {
         var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
@@ -20,24 +20,33 @@
             verify: { projectID: '68893c3cd03afd0f032a7f72' },
             url: 'https://general-runtime.voiceflow.com',
             versionID: 'production',
-            voice: {
-              url: "https://runtime-api.voiceflow.com"
-            }
+            voice: { url: 'https://runtime-api.voiceflow.com' }
           });
 
-          // 🔶 INJECTION: listen for the scroll trigger from React
-          window.addEventListener("VF_SCROLL_50_HOME", (e) => {
-            const detail = e.detail || {};
-            // Send to VF as both an event and variable
-            window.voiceflow.chat.track("scroll_50_home", detail);
-            window.voiceflow.chat.updateVariables({
-              scroll_depth: detail.scrollDepth,
-              page: detail.page || "home"
-            });
+          // Listen for the custom event dispatched by your React HomePage
+          window.addEventListener('VF_SCROLL_50_HOME', function(e) {
+            var detail = (e && e.detail) || {};
+            var chat = window.voiceflow && window.voiceflow.chat;
+            if (!chat) return;
+
+            // Send as a named event to Voiceflow
+            if (typeof chat.sendEvent === 'function') {
+              chat.sendEvent({
+                type: 'event',
+                payload: { name: 'scroll_50_home', ...detail }
+              });
+            }
+
+            // Also store values as variables for Studio conditions
+            if (typeof chat.setVariable === 'function') {
+              if (detail.scrollDepth != null) chat.setVariable('scroll_depth', detail.scrollDepth);
+              chat.setVariable('page', detail.page || 'home');
+              if (detail.path) chat.setVariable('path', detail.path);
+            }
           });
         };
-        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-        v.type = "text/javascript";
+        v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+        v.type = 'text/javascript';
         s.parentNode.insertBefore(v, s);
       })(document, 'script');
     </script>
